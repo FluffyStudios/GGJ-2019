@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class MainGameScreen : FluffyBox.GuiScreen
 {
+    public Animator TitleAnimator;
+
     private IGameService privateGameService;
 
     private IGameService GameService
@@ -20,6 +22,17 @@ public class MainGameScreen : FluffyBox.GuiScreen
         }
     }
 
+    public void OnZoomCb()
+    {
+        ICameraService cameraService = FluffyBox.Services.GetService<ICameraService>();
+        if (cameraService.CurrentState != CameraManager.CameraState.MainMenu)
+        {
+            return;
+        }
+
+        cameraService.Zoom();
+        this.TitleAnimator.SetBool("Exit", true);
+    }
 
     protected override IEnumerator OnBeginShow(bool animated = true)
     {

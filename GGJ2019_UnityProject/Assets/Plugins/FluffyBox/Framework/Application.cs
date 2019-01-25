@@ -47,8 +47,6 @@ namespace FluffyBox
         private IEnumerator Ignite()
         {
             this.Bootstrapper.SetActive(true);
-            this.GameRoot.SetActive(false);
-            this.SkyboxCamera.SetActive(true);
 
             for (int i = 0, lth = this.managers.Length; i < lth; ++i)
             {
@@ -74,9 +72,7 @@ namespace FluffyBox
                 this.managers[i].OnIgnitionCompleted();
             }
 
-            this.Bootstrapper.SetActive(false);
-            this.GameRoot.SetActive(true);
-            this.SkyboxCamera.SetActive(true);
+            this.Bootstrapper.SetActive(false); 
 
         }
     }
