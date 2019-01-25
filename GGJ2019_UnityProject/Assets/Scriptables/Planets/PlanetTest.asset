@@ -10,10 +10,35 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 88c6936cdfda75546b9291589967fe92, type: 3}
-  m_Name: NewPlanet
+  m_Name: PlanetTest
   m_EditorClassIdentifier: 
-  m_caseName: 
-  m_planetName: 
-  m_planetTexture: {fileID: 0}
-  m_planetCharacters: []
+  m_caseName: L'affaire du test
+  m_planetName: Testaya
+  m_planetTexture: {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
+  m_planetLeader:
+    m_entitySprite: {fileID: 0}
+    m_entityPos: 0
+    m_characterName: 
+    m_speech: 
+    m_isGuilty: 0
+    m_characterSound: {fileID: 0}
+  m_planetCharacters:
+  - m_entitySprite: {fileID: 0}
+    m_entityPos: 0
+    m_characterName: 
+    m_speech: fgdfgdfgfdh
+    m_isGuilty: 0
+    m_characterSound: {fileID: 0}
+  - m_entitySprite: {fileID: 0}
+    m_entityPos: 0
+    m_characterName: 
+    m_speech: 
+    m_isGuilty: 0
+    m_characterSound: {fileID: 0}
+  - m_entitySprite: {fileID: 0}
+    m_entityPos: 0
+    m_characterName: 
+    m_speech: 
+    m_isGuilty: 0
+    m_characterSound: {fileID: 0}
   m_planetDoodads: []

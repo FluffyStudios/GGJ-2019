@@ -18,19 +18,15 @@ public class PlanetDescriptor : ScriptableObject
     public Texture2D planetTexture { get { return m_planetTexture; } }
 
     [SerializeField]
-    private PlanetCharacter m_planetLeader;
-    public PlanetCharacter planetLeader { get { return m_planetLeader; } }
+    private PlanetCharacterDescriptor m_planetLeader;
+    public PlanetCharacterDescriptor planetLeader { get { return m_planetLeader; } }
+    
+    [SerializeField]
+    private PlanetCharacterDescriptor[] m_planetCharacters;
+    public PlanetCharacterDescriptor[] planetCharacters { get { return m_planetCharacters; } }
 
     [SerializeField]
-    private PlanetCharacter[] m_guiltyCharacters;
-    public PlanetCharacter[] guiltyCharacters { get { return m_guiltyCharacters; } }
-
-    [SerializeField]
-    private PlanetCharacter[] m_planetCharacters;
-    public PlanetCharacter[] planetCharacters { get { return m_planetCharacters; } }
-
-    [SerializeField]
-    private PlanetDoodad[] m_planetDoodads;
-    public PlanetDoodad[] planetDoodads { get { return m_planetDoodads; } }
+    private PlanetCharacterDescriptor[] m_planetDoodads;
+    public PlanetCharacterDescriptor[] planetDoodads { get { return m_planetDoodads; } }
 
 }

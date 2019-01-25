@@ -2,15 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class PlanetCharacter : PlanetEntity
+public class PlanetCharacter : MonoBehaviour
 {
-    [SerializeField]
-    private string m_characterName;
-    public string characterName { get { return m_characterName; } }
+    [SerializeField] private SpriteRenderer m_spriteRenderer;
+    private PlanetCharacterDescriptor m_descriptor;
+    public PlanetCharacterDescriptor descriptor { get { return m_descriptor; } }
 
-    [SerializeField]
-    private string m_speech;
-    public string speech { get { return m_speech; } }
+    public PlanetCharacter(PlanetCharacterDescriptor charDescriptor)
+    {
+        m_descriptor = charDescriptor;
+        if (m_descriptor.entitySprite != null)
+            m_spriteRenderer.sprite = m_descriptor.entitySprite;
+    }
     
+    void OnMouseDown()
+    {
+        // check si enquête en cours ou denonciation
+        // si enquête en cours
+        Debug.Log("ce personnage dit : " + m_descriptor.speech);
+        
+    }
+
 }

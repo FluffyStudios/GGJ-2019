@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class PlanetDoodad : PlanetEntity
+public class PlanetDoodadDescriptor : PlanetEntity
 {
     // Start is called before the first frame update
     void Start()
