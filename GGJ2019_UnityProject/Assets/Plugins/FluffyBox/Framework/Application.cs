@@ -5,6 +5,8 @@ namespace FluffyBox
     public class Application : UnityEngine.MonoBehaviour
     {
         public UnityEngine.GameObject Bootstrapper;
+        public UnityEngine.GameObject GameRoot;
+        public UnityEngine.GameObject SkyboxCamera;
 
         private static Application instance;
         public static Application Instance
@@ -45,6 +47,8 @@ namespace FluffyBox
         private IEnumerator Ignite()
         {
             this.Bootstrapper.SetActive(true);
+            this.GameRoot.SetActive(false);
+            this.SkyboxCamera.SetActive(true);
 
             for (int i = 0, lth = this.managers.Length; i < lth; ++i)
             {
@@ -71,6 +75,9 @@ namespace FluffyBox
             }
 
             this.Bootstrapper.SetActive(false);
+            this.GameRoot.SetActive(true);
+            this.SkyboxCamera.SetActive(true);
+
         }
     }
 }
