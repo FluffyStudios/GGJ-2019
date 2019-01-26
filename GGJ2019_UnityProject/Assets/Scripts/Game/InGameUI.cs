@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using FluffyTools;
 
 public class InGameUI : MonoBehaviour
 {
@@ -10,11 +11,16 @@ public class InGameUI : MonoBehaviour
     [SerializeField] private Button m_validateAccuseBtn;
     [SerializeField] private GameObject m_accusationFilter;
     [SerializeField] private SpeechBubble m_speechBubblePrefab;
+    [SerializeField] private GameObject m_mainPopupGo;
+    [SerializeField] private Text m_mainPopupMessageText;
+    [SerializeField] private Image m_inspectorPortrait;
     [SerializeField] private Transform m_speechBubblecontent;
     private Dictionary<PlanetCharacter, SpeechBubble> m_charactersToSpeeches;
     // Start is called before the first frame update
     void Start()
     {
+        m_mainPopupMessageText.gameObject.SetActive(false);
+        m_inspectorPortrait.gameObject.SetActive(false);
         m_charactersToSpeeches = new Dictionary<PlanetCharacter, SpeechBubble>();
         m_cancelAccuseBtn.gameObject.SetActive(false);
         m_validateAccuseBtn.gameObject.SetActive(false);
@@ -25,11 +31,23 @@ public class InGameUI : MonoBehaviour
     
     public void OnAccuseBtnClick()
     {
+        /*Cx.Sequence(
+               Cx.Call(() =>
+               {
+                   m_mainPopupMessageText.text = "ACCUSATION TIME !";
+                   m_mainPopupMessageText.gameObject.SetActive(true);
+               }),
+               Cx.Delay(0.01f),
+               Cx.Call(() => {
+                
+                })
+                ).Start(this);*/
         m_cancelAccuseBtn.gameObject.SetActive(true);
         m_validateAccuseBtn.gameObject.SetActive(true);
         m_accuseBtn.gameObject.SetActive(false);
         m_accusationFilter.SetActive(true);
         PlanetManager.Instance.StartAccusation();
+
     }
     public void OnAccuseCanceled()
     {

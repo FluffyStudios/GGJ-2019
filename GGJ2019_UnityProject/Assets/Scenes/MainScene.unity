@@ -801,6 +801,9 @@ MonoBehaviour:
   m_accusationFilter: {fileID: 252926167}
   m_speechBubblePrefab: {fileID: 6690403780403497053, guid: 31b73f426d4bf8b4c88329529d14a229,
     type: 3}
+  m_mainPopupGo: {fileID: 0}
+  m_mainPopupMessageText: {fileID: 0}
+  m_inspectorPortrait: {fileID: 0}
   m_speechBubblecontent: {fileID: 522059193}
 --- !u!114 &484097633
 MonoBehaviour:

@@ -21,7 +21,7 @@ public class SpeechBubble : MonoBehaviour
         {
             m_bubbleText.text = target.descriptor.speech;
         }
-        transform.position = new Vector2(m_target.transform.position.x, m_target.transform.position.y + 1.5f);
+        transform.position = new Vector2(m_target.transform.position.x, m_target.transform.position.y + 2.5f);
         gameObject.SetActive(true);
     }
 
