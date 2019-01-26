@@ -175,11 +175,8 @@ public class PlanetManager : MonoBehaviour
                 m_rotationStrenght = m_rotationSpeed * Mathf.Min(m_maxSwipDist,(swipDist*m_swipDistMultiplier));
 
                 m_isRotating = true;
-            }
-            
-        }
-
-        
+            }           
+        }    
     }
     private void ResolveCharacterTouch(PlanetCharacter charTouched)
     {
@@ -246,13 +243,13 @@ public class PlanetManager : MonoBehaviour
     private void Failed()///// echec de l'accusation
     {
         this.GeneratePlanet(m_levels[m_currentlevel]);
-        Debug.Log("RAté idiiiot!");
     }
 
     private void Win()
     {
+        if (m_currentlevel < m_levels.Length - 1)
+            m_currentlevel += 1;
         this.GeneratePlanet(m_levels[m_currentlevel]);
-        Debug.Log("Bravo le veau!");
     }
 
     public void ResolveAccusation()
@@ -270,7 +267,6 @@ public class PlanetManager : MonoBehaviour
                 return;
             }
         }
-
         Win();
     }
 
@@ -292,7 +288,6 @@ public class PlanetManager : MonoBehaviour
         m_currentState = LevelState.Accusing;
         
     }
-
 
     private void PlanetRotation()
     {
