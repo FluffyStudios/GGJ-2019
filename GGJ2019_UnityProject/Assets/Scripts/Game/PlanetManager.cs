@@ -69,7 +69,8 @@ public class PlanetManager : MonoBehaviour
     private void GeneratePlanet(PlanetDescriptor planetDescriptor)
     {
         m_currentState = LevelState.Starting;
-
+        m_isRotating = false;
+        m_isSliding = false;
         if(m_currentPlanet != null)
         {
             m_previousPlanet = m_currentPlanet;
