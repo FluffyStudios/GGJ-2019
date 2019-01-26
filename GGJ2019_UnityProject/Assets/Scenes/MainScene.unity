@@ -252,6 +252,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_planetPrefab: {fileID: 58, guid: 971bc3cd0fb95c8439b61ca5fbae892a, type: 3}
+  m_planetPosY: -9
   m_characterPrefab: {fileID: 4994190366104554033, guid: c91b069d504d14e49b93d452da6d89c7,
     type: 3}
   m_doodadPrefab: {fileID: 1976143929159141176, guid: 7b6a2b9feeb018143b3d576ff9818a19,
@@ -1262,26 +1263,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653911584728214490, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
-        type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653911584728214490, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
-        type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653911584728214490, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -45
-      objectReference: {fileID: 0}
-    - target: {fileID: 7653911584728214490, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
-        type: 3}
-      propertyPath: m_Pivot.y
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}

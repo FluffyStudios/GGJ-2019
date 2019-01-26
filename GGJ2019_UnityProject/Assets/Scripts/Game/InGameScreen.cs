@@ -16,6 +16,8 @@ public class InGameScreen : FluffyBox.GuiScreen
     [SerializeField] private Transform m_speechBubblecontent;
     [SerializeField] private MissionTitle m_missionTitle;
     public MissionTitle missionTitle { get { return m_missionTitle; } }
+    [SerializeField] private AccusationPopup m_accusationPopup;
+    public AccusationPopup accusationPopup { get { return m_accusationPopup; } }
 
     [SerializeField] private AudioSource m_AudioSource;
     [SerializeField] private AudioClip m_SuccessAudioClip;
@@ -36,17 +38,7 @@ public class InGameScreen : FluffyBox.GuiScreen
 
     public void OnAccuseModeCb()
     {
-        /*Cx.Sequence(
-               Cx.Call(() =>
-               {
-                   m_mainPopupMessageText.text = "ACCUSATION TIME !";
-                   m_mainPopupMessageText.gameObject.SetActive(true);
-               }),
-               Cx.Delay(0.01f),
-               Cx.Call(() => {
-                
-                })
-                ).Start(this);*/
+        m_accusationPopup.AccusationPopupAnim().Start(this);
         m_cancelAccuseBtn.gameObject.SetActive(true);
         m_validateAccuseBtn.gameObject.SetActive(true);
         m_accuseBtn.gameObject.SetActive(false);
