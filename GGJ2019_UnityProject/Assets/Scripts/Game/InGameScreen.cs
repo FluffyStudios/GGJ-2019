@@ -4,23 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using FluffyTools;
 
-public class InGameUI : MonoBehaviour
+public class InGameScreen : MonoBehaviour
 {
     [SerializeField] private Button m_accuseBtn;
     [SerializeField] private Button m_cancelAccuseBtn;
     [SerializeField] private Button m_validateAccuseBtn;
     [SerializeField] private GameObject m_accusationFilter;
     [SerializeField] private SpeechBubble m_speechBubblePrefab;
-    [SerializeField] private GameObject m_mainPopupGo;
-    [SerializeField] private Text m_mainPopupMessageText;
-    [SerializeField] private Image m_inspectorPortrait;
     [SerializeField] private Transform m_speechBubblecontent;
     private Dictionary<PlanetCharacter, SpeechBubble> m_charactersToSpeeches;
+
     // Start is called before the first frame update
     void Start()
     {
-        m_mainPopupMessageText.gameObject.SetActive(false);
-        m_inspectorPortrait.gameObject.SetActive(false);
         m_charactersToSpeeches = new Dictionary<PlanetCharacter, SpeechBubble>();
         m_cancelAccuseBtn.gameObject.SetActive(false);
         m_validateAccuseBtn.gameObject.SetActive(false);

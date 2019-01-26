@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 225190367865829830}
   - component: {fileID: 114201722249632052}
   - component: {fileID: 114088493022327940}
+  - component: {fileID: 3529273633527779859}
   m_Layer: 0
   m_Name: MainGameScreen
   m_TagString: Untagged
@@ -87,7 +88,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 015e6c21235d0bd4085b13b0cf88749b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TitleAnimator: {fileID: 1071435288}
+  TitleAnimator: {fileID: 3529273633527779859}
+--- !u!95 &3529273633527779859
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293336387583012}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f7237640f266ccd4a9a2ffcc3e2ca5b6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1641825259798286
 GameObject:
   m_ObjectHideFlags: 0
@@ -99,9 +119,8 @@ GameObject:
   - component: {fileID: 224727903150146722}
   - component: {fileID: 222652115981855872}
   - component: {fileID: 114926111568729826}
-  - component: {fileID: 1071435288}
   m_Layer: 0
-  m_Name: Text
+  m_Name: TitleText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -168,25 +187,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: Inspector Planet
---- !u!95 &1071435288
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1641825259798286}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f7237640f266ccd4a9a2ffcc3e2ca5b6, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6730938689940737749
 GameObject:
   m_ObjectHideFlags: 0
