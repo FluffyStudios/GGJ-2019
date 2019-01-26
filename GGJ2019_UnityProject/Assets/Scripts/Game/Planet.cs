@@ -25,32 +25,30 @@ public class Planet : MonoBehaviour
     [SerializeField] private Transform m_entitiesParent;
     [SerializeField] private float m_backRadius;
     [SerializeField] private float m_frontRadius;
-
+    private PlanetCharacter m_planetLeader;
+    public PlanetCharacter planetLeader { get { return m_planetLeader; } }
     public void Generate(PlanetDescriptor planetDescriptor)
     {
         m_descriptor = planetDescriptor;
         m_guiltyCount = 0;
         foreach(PlanetCharacterDescriptor characterDescriptor in m_descriptor.planetCharacters)
         {
-            PlanetCharacter character = Instantiate(PlanetManager.Instance.characterPrefab, m_entitiesParent, false) as PlanetCharacter;
-            character.InitializeCharacter(characterDescriptor);
-            character.gameObject.transform.localPosition = PlanetMathHelper.FromPolar(m_frontRadius, character.descriptor.entityPos);
-            character.gameObject.transform.localRotation = Quaternion.Euler(0f,0f, -character.descriptor.entityPos);
-            if (characterDescriptor.isGuilty)
-                m_guiltyCount += 1;
+            InstanciateCharacter(characterDescriptor);           
         }
-        // x = r cos alpha
-        // y = r sin Alpha
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+        if(m_descriptor.planetLeader != null)
+        {
+            m_planetLeader = InstanciateCharacter(m_descriptor.planetLeader);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private PlanetCharacter InstanciateCharacter(PlanetCharacterDescriptor characterDescriptor)
     {
-        
+        if (characterDescriptor.isGuilty)
+            m_guiltyCount += 1;
+        PlanetCharacter character = Instantiate(PlanetManager.Instance.characterPrefab, m_entitiesParent, false) as PlanetCharacter;
+        character.InitializeCharacter(characterDescriptor);
+        character.gameObject.transform.localPosition = PlanetMathHelper.FromPolar(m_frontRadius, character.descriptor.entityPos);
+        character.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, -character.descriptor.entityPos);
+        return character;
     }
 }

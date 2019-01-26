@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using FluffyTools;
 
 public enum LevelState : byte
 {
@@ -22,6 +23,7 @@ public class PlanetManager : MonoBehaviour
     [SerializeField] float m_maxSwipDist = 5f;
     [SerializeField] float m_minDetectionSwipDist = 2f;
     [SerializeField] float m_rotationBrakeSmoothing = 0.2f;
+    [SerializeField] float m_planetTransitionAnimDuration = 2f;
 
     public delegate void SelectCharAction(PlanetCharacter target, LevelState state);
     public static event SelectCharAction OnCharSelectedEvent;
@@ -29,7 +31,8 @@ public class PlanetManager : MonoBehaviour
 
     private LevelState m_currentState;
     private int m_currentlevel;
-    private Planet m_currentPlanet;  
+    private Planet m_currentPlanet;
+    private Planet m_previousPlanet;
     private PlanetCharacter m_activatedCharacter;
     private Vector2 m_startTouch;
     private float m_rotationStrenght;//Specify Angle For Rotation
@@ -63,14 +66,47 @@ public class PlanetManager : MonoBehaviour
 
     private void GeneratePlanet(PlanetDescriptor planetDescriptor)
     {
+        m_currentState = LevelState.Starting;
+
         if(m_currentPlanet != null)
         {
-            Destroy(m_currentPlanet.gameObject);
+            m_previousPlanet = m_currentPlanet;
         }
 
         m_currentPlanet = Instantiate(m_planetPrefab, transform) as Planet;
-        m_currentPlanet.transform.position = new Vector3(0f, -6.2f, 0f);
+        if(m_previousPlanet == null)
+        {
+            m_currentPlanet.transform.position = new Vector2(0f, -6.2f);
+        }        
+        else
+        {
+            m_currentPlanet.transform.position = new Vector2(20f, -6.2f);
+            Cx.Sequence(
+                   Cx.Call(() =>
+                   {
+                        
+                   }),
+                   Cx.Delay(1.5f),
+                   Cx.Parallel(   
+                       Cx.MoveTo(m_previousPlanet.gameObject, new Vector2(-20f, -6.2f), m_planetTransitionAnimDuration, false, Easing.EaseType.Linear),
+                       Cx.MoveTo(m_currentPlanet.gameObject, new Vector2(0f, -6.2f), m_planetTransitionAnimDuration, false, Easing.EaseType.Linear)
+                   ),
+                   
+                   Cx.Call(() => {
+                       Destroy(m_previousPlanet.gameObject);
+                       InitializeNewLevel(m_currentPlanet);
+                       // lancer affichage du nom de mission
+                   })
+                    ).Start(this);
+        }            
         m_currentPlanet.Generate(planetDescriptor);
+    }
+
+    private void InitializeNewLevel(Planet planet)
+    {
+        // lancer anim affichage nom de mission
+        // lancer bulle de dialogue du leader de la planète
+        
     }
 
     private void Update()
