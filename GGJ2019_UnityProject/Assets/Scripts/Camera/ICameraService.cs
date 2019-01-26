@@ -5,5 +5,5 @@
         get;
     }
 
-    void Zoom();
+    void Zoom(bool zoomIn);
 }

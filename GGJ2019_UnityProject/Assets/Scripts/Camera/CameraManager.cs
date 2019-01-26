@@ -34,10 +34,10 @@ public class CameraManager : FluffyBox.Manager, ICameraService
         }
     }
 
-    public void Zoom()
+    public void Zoom(bool zoomIn)
     {
         this.CurrentState = CameraState.Transition;
-        this.MainCameraAnimator.SetBool("ZoomIn", true);
+        this.MainCameraAnimator.SetBool("ZoomIn", zoomIn);
     }
 
     public void ZoomInEnded()

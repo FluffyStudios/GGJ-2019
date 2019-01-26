@@ -80,17 +80,20 @@ public class PlanetManager : MonoBehaviour
         }        
         else
         {
-            m_currentPlanet.transform.position = new Vector2(20f, -6.2f);
+            m_currentPlanet.transform.position = new Vector2(50f, -6.2f);
             Cx.Sequence(
-                   Cx.Call(() =>
-                   {
-                        
-                   }),
-                   Cx.Delay(1.5f),
-                   Cx.Parallel(   
-                       Cx.MoveTo(m_previousPlanet.gameObject, new Vector2(-20f, -6.2f), m_planetTransitionAnimDuration, false, Easing.EaseType.Linear),
-                       Cx.MoveTo(m_currentPlanet.gameObject, new Vector2(0f, -6.2f), m_planetTransitionAnimDuration, false, Easing.EaseType.Linear)
-                   ),
+                   Cx.Parallel(
+                       Cx.Call(() =>
+                       {
+                           Game.CameraService.Zoom(false);
+                       }),
+                       Cx.MoveTo(m_previousPlanet.gameObject, new Vector2(-50f, -6.2f), m_planetTransitionAnimDuration, false, Easing.EaseType.Linear),
+                       Cx.MoveTo(m_currentPlanet.gameObject, new Vector2(0f, -6.2f), m_planetTransitionAnimDuration, false, Easing.EaseType.Linear),
+                       Cx.CallLater(m_planetTransitionAnimDuration - 1f, () =>
+                       {
+                           Game.CameraService.Zoom(true);
+                       })
+                    ),
                    
                    Cx.Call(() => {
                        Destroy(m_previousPlanet.gameObject);
@@ -229,12 +232,13 @@ public class PlanetManager : MonoBehaviour
 
     private void Failed()///// echec de l'accusation
     {
-        
+        this.GeneratePlanet(m_levels[m_currentlevel]);
         Debug.Log("RAté idiiiot!");
     }
 
     private void Win()
     {
+        this.GeneratePlanet(m_levels[m_currentlevel]);
         Debug.Log("Bravo le veau!");
     }
 

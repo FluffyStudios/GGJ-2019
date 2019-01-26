@@ -30,7 +30,7 @@ public class MainGameScreen : FluffyBox.GuiScreen
             return;
         }
 
-        cameraService.Zoom();
+        cameraService.Zoom(true);
         this.TitleAnimator.SetBool("Exit", true);
     }
 
