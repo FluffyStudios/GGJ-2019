@@ -33,7 +33,7 @@ public class Planet : MonoBehaviour
         m_guiltyCount = 0;
         foreach(PlanetDoodadDescriptor doodadDescriptor in m_descriptor.planetDoodads)
         {
-            //InstanciateDoodad(doodadDescriptor);
+            InstanciateDoodad(doodadDescriptor);
         }
 
         foreach(PlanetCharacterDescriptor characterDescriptor in m_descriptor.planetCharacters)
@@ -57,13 +57,12 @@ public class Planet : MonoBehaviour
         return character;
     }
 
-    /*private PlanetSceneryElement InstanciateDoodad(PlanetDoodadDescriptor doodadDescriptor)
+    private PlanetSceneryElement InstanciateDoodad(PlanetDoodadDescriptor doodadDescriptor)
     {
         
-        planetsceneryElement doodad = Instantiate(PlanetManager.Instance, m_entitiesParent, false) as PlanetCharacter;
-        character.InitializeCharacter(characterDescriptor);
-        character.gameObject.transform.localPosition = PlanetMathHelper.FromPolar(m_frontRadius, character.descriptor.entityPos);
-        character.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, -character.descriptor.entityPos);
-        return character;
-}*/
+        PlanetSceneryElement doodad = Instantiate(PlanetManager.Instance.doodadPrefab, m_entitiesParent, false) as PlanetSceneryElement;
+        doodad.gameObject.transform.localPosition = PlanetMathHelper.FromPolar(m_frontRadius, doodad.descriptor.entityPos);
+        doodad.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, -doodad.descriptor.entityPos);
+        return doodad;
+}
 }

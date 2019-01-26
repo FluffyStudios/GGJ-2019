@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class planetsceneryElement : PlanetEntity
+public class PlanetSceneryElement : PlanetEntity
 {
     public PlanetDoodadDescriptor GetSceneryDescriptor()
     {

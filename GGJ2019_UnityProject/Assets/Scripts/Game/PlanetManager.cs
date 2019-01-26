@@ -15,8 +15,10 @@ public class PlanetManager : MonoBehaviour
 {  
     public static PlanetManager Instance;
     [SerializeField] private Planet m_planetPrefab;
-    [SerializeField] private PlanetCharacter m_characterPrefab;
+    [SerializeField] private PlanetCharacter m_characterPrefab;    
     public PlanetCharacter characterPrefab { get { return m_characterPrefab; } }
+    [SerializeField] private PlanetSceneryElement m_doodadPrefab;
+    public PlanetSceneryElement doodadPrefab { get { return m_doodadPrefab; } }
     [SerializeField] private PlanetDescriptor[] m_levels;
     [SerializeField] float m_rotationSpeed = 5f;
     [SerializeField] float m_swipDistMultiplier = 5f;
