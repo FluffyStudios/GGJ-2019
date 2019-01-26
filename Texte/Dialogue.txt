@@ -34,3 +34,18 @@ I - Le voleur aime bien se reposer près d'un arbre (Chien)
 J - Il y a un tier d'arbre par rapport au nombre d'habitant (Vache)
 K - Il y a plus de la moitié des habitants qui porte un Noeud Papillon (Cheval)
 (L) - K raconte toujours la vérité (Loup)
+
+Enigme 4 
+
+A - Ma récompense est en lambeau
+B - J'étais avec C quand ça s'est passé. (bleu)
+C - Nous étions  dans la fôret avec B
+D - E possède des ciseaux
+E - J'ai prêté mes ciseaux à L
+F - J'ai vu G près de la récompense quand le malheureux évènement s'est passé
+G - H et K feraient tout pour combler B
+H - C déteste la forêt jamais il ne trainerait là bas
+I - J'étais avec A lorsque ça s'est passé, ils étaient plusieurs et portaient du bleus
+J - I était tellement jaloux de A pour la récompense (bleu) 
+K - B n'a jamais aimé A
+L - F était le vrai gagnant de ce concours il était très en colère d'avoir perdu
