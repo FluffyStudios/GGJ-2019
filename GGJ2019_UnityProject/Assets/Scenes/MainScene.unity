@@ -257,6 +257,11 @@ MonoBehaviour:
     type: 3}
   m_levels:
   - {fileID: 11400000, guid: a935ce5a439e7bb4cbb9ba595b9702cb, type: 2}
+  m_rotationSpeed: 5
+  m_swipDistMultiplier: 0.3
+  m_maxSwipDist: 10
+  m_minDetectionSwipDist: 2
+  m_rotationBrakeSmoothing: 2
 --- !u!1 &370260335
 GameObject:
   m_ObjectHideFlags: 0
