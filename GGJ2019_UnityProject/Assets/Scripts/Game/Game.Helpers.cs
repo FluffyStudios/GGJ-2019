@@ -1,6 +1,7 @@
 ﻿public partial class Game
 {
     private static IGameService privateGameService;
+    private static ICameraService privateCameraService;
     private static Game privateGame;
 
     public static IGameService GameService
@@ -13,6 +14,19 @@
             }
 
             return Game.privateGameService;
+        }
+    }
+
+    public static ICameraService CameraService
+    {
+        get
+        {
+            if (Game.privateCameraService == null)
+            {
+                Game.privateCameraService = FluffyBox.Services.GetService<ICameraService>();
+            }
+
+            return Game.privateCameraService;
         }
     }
 

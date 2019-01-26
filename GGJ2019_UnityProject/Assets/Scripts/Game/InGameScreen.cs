@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using FluffyTools;
 
-public class InGameScreen : MonoBehaviour
+public class InGameScreen : FluffyBox.GuiScreen
 {
     [SerializeField] private Button m_accuseBtn;
     [SerializeField] private Button m_cancelAccuseBtn;
@@ -65,6 +65,11 @@ public class InGameScreen : MonoBehaviour
 
     private void OnCharSelected(PlanetCharacter character, LevelState state)
     {
+        if (Game.CameraService.CurrentState != CameraManager.CameraState.InGame)
+        {
+            return;
+        }
+
         SpeechBubble currentBubble;
         if(m_charactersToSpeeches.TryGetValue(character, out currentBubble))
         {
