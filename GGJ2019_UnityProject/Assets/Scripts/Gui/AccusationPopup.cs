@@ -24,7 +24,7 @@ public class AccusationPopup : MonoBehaviour
     {
         Vector2 startTitlePos = new Vector2(Screen.currentResolution.width * 0.5f + m_titleRect.rect.width * 0.5f, m_titleRect.position.y);
         Vector2 startPortraitPos = new Vector2(-Screen.currentResolution.width * 0.5f - m_portraitRect.rect.width * 0.5f, m_portraitRect.position.y);
-        Vector2 portraitInPos = new Vector2(-Screen.currentResolution.width * 0.5f + m_portraitRect.rect.width * 0.5f, m_portraitRect.position.y);
+        Vector2 portraitInPos = new Vector2(0f/*-Screen.currentResolution.width * 0.5f + m_portraitRect.rect.width*0.5f*/, m_portraitRect.position.y);
         m_titleRect.anchoredPosition = startTitlePos;
         m_portraitRect.anchoredPosition = startTitlePos;
         return Cx.Sequence(
