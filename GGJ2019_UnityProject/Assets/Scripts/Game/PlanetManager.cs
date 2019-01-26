@@ -88,6 +88,7 @@ public class PlanetManager : MonoBehaviour
             m_currentPlanet.planetLeader.PlaySelectionSound();
             m_activatedCharacter = m_currentPlanet.planetLeader;
             m_currentState = LevelState.Investigating;
+            inGameScreen.accuseBtn.gameObject.SetActive(true);
         }));
 
         if (m_previousPlanet == null)
@@ -140,6 +141,8 @@ public class PlanetManager : MonoBehaviour
         {
             m_currentPlanet.transform.position = new Vector2(50f, -6.2f);
         }
+
+        m_currentPlanet.PlayMusic();
     }
 
     private void Update()
@@ -259,7 +262,8 @@ public class PlanetManager : MonoBehaviour
 
     private void Failed()///// echec de l'accusation
     {
-        this.GeneratePlanet(m_levels[m_currentlevel]);
+        InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
+        inGameScreen.OnAccuseCanceled();
     }
 
     private void Win()
@@ -277,6 +281,7 @@ public class PlanetManager : MonoBehaviour
             Failed();
             return;
         }
+
         foreach(PlanetCharacter accused in m_accusedCharacters)
         {
             if (!accused.GetCharacterDescriptor().isGuilty)
@@ -285,6 +290,7 @@ public class PlanetManager : MonoBehaviour
                 return;
             }
         }
+
         Win();
     }
 

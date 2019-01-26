@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_caseName: L'affaire Popo
   m_planetName: Testaya
-  m_planetTexture: {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
+  m_planetTexture: {fileID: 21300000, guid: c9231b7d31631fb4aa2107b5a4664da1, type: 3}
+  m_planetMusic: {fileID: 8300000, guid: 60f0b10f4fe09154dbd31f87377f8da9, type: 3}
   m_planetLeader:
     m_entitySprite: {fileID: 21300000, guid: d57c24f0ed4846b44a0690251ece4536, type: 3}
     m_entityPos: 0
@@ -46,7 +47,7 @@ MonoBehaviour:
     m_characterName: Le coeur
     m_speech: "Il parle \xE0 l'envers !"
     m_accusedSpeech: Comment osez-vous!?
-    m_isGuilty: 0
+    m_isGuilty: 1
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
   - m_entitySprite: {fileID: 21300000, guid: 588ac5b533407b74ab8b59d1f45e90db, type: 3}
     m_entityPos: 260
@@ -76,7 +77,7 @@ MonoBehaviour:
     m_characterName: le livre
     m_speech: Les gourmands ne portent pas de blanc
     m_accusedSpeech: Je suis innocent monsieur!
-    m_isGuilty: 1
+    m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
   - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
     m_entityPos: 230

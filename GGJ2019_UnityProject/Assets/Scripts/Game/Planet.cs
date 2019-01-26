@@ -23,8 +23,10 @@ public class Planet : MonoBehaviour
     private int m_guiltyCount;
     public int guiltyCount { get { return m_guiltyCount; } }
     [SerializeField] private Transform m_entitiesParent;
+    [SerializeField] private SpriteRenderer m_planetCoreSprite;
     [SerializeField] private float m_backRadius;
     [SerializeField] private float m_frontRadius;
+    [SerializeField] private AudioSource m_audioSource;
     private PlanetCharacter m_planetLeader;
     public PlanetCharacter planetLeader { get { return m_planetLeader; } }
     public void Generate(PlanetDescriptor planetDescriptor)
@@ -40,10 +42,26 @@ public class Planet : MonoBehaviour
         {
             InstanciateCharacter(characterDescriptor);           
         }
+
+        if (m_descriptor.planetTexture != null)
+        {
+            m_planetCoreSprite.sprite = m_descriptor.planetTexture;
+        }
+
         if(m_descriptor.planetLeader != null)
         {
             m_planetLeader = InstanciateCharacter(m_descriptor.planetLeader);
         }
+
+        if (m_descriptor.planetMusic != null)
+        {
+            m_audioSource.clip = m_descriptor.planetMusic;
+        }
+    }
+
+    public void PlayMusic()
+    {
+        m_audioSource.Play();
     }
 
     private PlanetCharacter InstanciateCharacter(PlanetCharacterDescriptor characterDescriptor)
@@ -64,5 +82,5 @@ public class Planet : MonoBehaviour
         doodad.gameObject.transform.localPosition = PlanetMathHelper.FromPolar(m_frontRadius, doodad.descriptor.entityPos);
         doodad.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, -doodad.descriptor.entityPos);
         return doodad;
-}
+    }
 }

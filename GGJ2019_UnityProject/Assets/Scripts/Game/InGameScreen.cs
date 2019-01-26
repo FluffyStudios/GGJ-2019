@@ -8,6 +8,7 @@ using FluffyTools;
 public class InGameScreen : FluffyBox.GuiScreen
 {
     [SerializeField] private Button m_accuseBtn;
+    public Button accuseBtn { get { return m_accuseBtn; } }
     [SerializeField] private Button m_cancelAccuseBtn;
     [SerializeField] private Button m_validateAccuseBtn;
     [SerializeField] private GameObject m_accusationFilter;
@@ -22,6 +23,7 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_charactersToSpeeches = new Dictionary<PlanetCharacter, SpeechBubble>();
         m_cancelAccuseBtn.gameObject.SetActive(false);
         m_validateAccuseBtn.gameObject.SetActive(false);
+        m_accuseBtn.gameObject.SetActive(false);
         m_accusationFilter.SetActive(false);
         PlanetManager.OnCharSelectedEvent += OnCharSelected;
         PlanetManager.OnCharUnSelectedEvent += OnCharUnSelected;
@@ -66,6 +68,7 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_accuseBtn.gameObject.SetActive(false);
         m_accusationFilter.SetActive(false);
         PlanetManager.Instance.ResolveAccusation();
+
         CleanAllBubbles();
     }
 
