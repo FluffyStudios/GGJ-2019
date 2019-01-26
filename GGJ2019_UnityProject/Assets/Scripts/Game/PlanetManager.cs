@@ -91,13 +91,11 @@ public class PlanetManager : MonoBehaviour
         }));
 
         if (m_previousPlanet == null)
-        {
-            m_currentPlanet.transform.position = new Vector2(0f, -6.2f);
+        {            
             NewPlanetArrival.Start(this);
         }
         else
         {
-            m_currentPlanet.transform.position = new Vector2(50f, -6.2f);
             Cx.Sequence(
                    Cx.Parallel(
                        Cx.Call(() =>
@@ -126,12 +124,22 @@ public class PlanetManager : MonoBehaviour
         m_currentState = LevelState.Starting;
         m_isRotating = false;
         m_isSliding = false;
-        if(m_currentPlanet != null)
+        if (m_currentPlanet != null)
         {
             m_previousPlanet = m_currentPlanet;
         }
-        m_currentPlanet = Instantiate(m_planetPrefab, transform) as Planet;     
+        m_currentPlanet = Instantiate(m_planetPrefab, transform) as Planet;
         m_currentPlanet.Generate(planetDescriptor);
+
+        if (m_previousPlanet == null)
+        {
+            m_currentPlanet.transform.position = new Vector2(0f, -6.2f);
+
+        }
+        else
+        {
+            m_currentPlanet.transform.position = new Vector2(50f, -6.2f);
+        }
     }
 
     private void Update()
