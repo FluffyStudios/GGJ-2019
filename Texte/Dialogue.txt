@@ -1,0 +1,36 @@
+Enigme 1
+
+A - Tu peux appuyer sur les personnages pour leur parler
+B - Pour te deplacer sur la planète fait glisser la planète avec ton doigt
+C - Les gens aui portent des tabliers font souvent des trucs sales
+D - L'habitant qui a fait ça, a des problèmes dans sa maison
+(E) - Il faut que tu dénonces la bonne personne
+F - C'est sûrement un cochon
+
+Enigme 2
+
+A - Certains aiment bien se cacher 
+B - Il parle à l'envers
+(C) - On raconte quelque fois n'importe quoi (à l'envers)
+D - Il n'aime pas se montrer ()
+(E) - Les gourmands portent pas de blanc ()
+F - Qu'est ce qu'il est classe, il porte des lunettes de soleil, et brille sous le soleil
+G - Le soleil ne brille qu'entre 150 et 270
+H - Nous, les mammifères, on ne pique pas les goûter 
+I - Tous les goûters sont entreposés sur les coordonnés de multiple de 20
+J - Ils sont peut être plusieurs ()
+
+Enigme 3
+
+A - Le voleur est un menteur (Singe)
+B - Nous sommes au nombres de douze (Singe)
+C - Toujours se méfier des singes (Faucon porte un chapeau)
+D - G n'est pas un menteur (Cheval)
+E - Il n'y a pas de tortue (Chat)
+F - Ce n'est pas un loup (Loup porte un chapeau)
+G - Les coquets sont tous des menteurmais les menteurs ne sont pas tous coquets (Faucon)
+H - Il ne porte que des chapeaux (Chat porte un Noeud Pap)
+I - Le voleur aime bien se reposer près d'un arbre (Chien)
+J - Il y a un tier d'arbre par rapport au nombre d'habitant (Vache)
+K - Il y a plus de la moitié des habitants qui porte un Noeud Papillon (Cheval)
+(L) - K raconte toujours la vérité (Loup)
