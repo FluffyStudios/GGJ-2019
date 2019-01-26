@@ -214,7 +214,7 @@ public class PlanetManager : MonoBehaviour
             {
                 if (OnCharUnSelectedEvent != null)
                 {
-                    OnCharUnSelectedEvent(m_activatedCharacter, m_currentState);
+                    OnCharUnSelectedEvent(charTouched, m_currentState);
                 }
                 m_accusedCharacters.Remove(charTouched);
             }
