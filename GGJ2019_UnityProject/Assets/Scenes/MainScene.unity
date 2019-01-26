@@ -264,7 +264,6 @@ MonoBehaviour:
   m_minDetectionSwipDist: 2
   m_rotationBrakeSmoothing: 2
   m_planetTransitionAnimDuration: 2
-  m_inGameScreen: {fileID: 2085260024}
 --- !u!1 &370260335
 GameObject:
   m_ObjectHideFlags: 0
@@ -1025,18 +1024,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &2085260024 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6062456780706937953, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
-    type: 3}
-  m_PrefabInstance: {fileID: 393738748216466656}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfcf5cd11b3c3b640a19e1bae2b6206f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2096505777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1273,38 +1260,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494718912, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1494718912, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303430376, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303430376, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1303430376, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1336094485, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1336094485, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1336094485, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}

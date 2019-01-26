@@ -18,19 +18,16 @@ public class SpeechBubble : MonoBehaviour
         {
             newText = target.GetCharacterDescriptor().accusedSpeech;
         }
-        else if (state == LevelState.Investigating)
+        else if (state == LevelState.Investigating || state == LevelState.Starting)
         {
             newText = target.GetCharacterDescriptor().speech;
         }
-
-        TextGenerator textGen = new TextGenerator();
-        TextGenerationSettings generationSettings = m_bubbleText.GetGenerationSettings(m_bubbleText.rectTransform.rect.size);
-        float textHeight = textGen.GetPreferredHeight(newText, generationSettings);
         m_bubbleText.text = newText;
+        float textHeight = m_bubbleText.preferredHeight;
         m_bubbleText.rectTransform.sizeDelta = new Vector2(m_bubbleText.rectTransform.sizeDelta.x, textHeight);
         m_rect.sizeDelta = new Vector2(m_rect.sizeDelta.x, textHeight + Mathf.Abs(m_bubbleText.rectTransform.anchoredPosition.y) * 2f);
 
-        transform.position = new Vector2(m_target.transform.position.x, m_target.transform.position.y + 2.5f);
+        this.Update();
         gameObject.SetActive(true);
     }
 
@@ -38,7 +35,7 @@ public class SpeechBubble : MonoBehaviour
     {
         if(m_target != null)
         {
-            transform.position = new Vector2(m_target.transform.position.x, m_target.transform.position.y + 1.5f);
+            transform.position = new Vector2(m_target.transform.position.x, m_target.transform.position.y + 0.5f);
         }
     }
 }

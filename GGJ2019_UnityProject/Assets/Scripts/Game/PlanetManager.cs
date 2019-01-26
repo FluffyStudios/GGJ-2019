@@ -26,7 +26,6 @@ public class PlanetManager : MonoBehaviour
     [SerializeField] private float m_minDetectionSwipDist = 2f;
     [SerializeField] private float m_rotationBrakeSmoothing = 0.2f;
     [SerializeField] private float m_planetTransitionAnimDuration = 2f;
-    [SerializeField] private InGameScreen m_inGameScreen;
 
     public delegate void SelectCharAction(PlanetCharacter target, LevelState state);
     public static event SelectCharAction OnCharSelectedEvent;
@@ -70,13 +69,14 @@ public class PlanetManager : MonoBehaviour
 
     public void StartMissionAnim()
     {
-        m_inGameScreen.CleanAllBubbles();
+        InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
+        inGameScreen.CleanAllBubbles();
         m_currentState = LevelState.Starting;
         m_isRotating = false;
         m_isSliding = false;
         Cx.Routine NewPlanetArrival = Cx.Sequence(
 
-        m_inGameScreen.missionTitle.TitleAnimation(m_currentlevel, m_levels[m_currentlevel].caseName, m_levels[m_currentlevel].planetName),
+        inGameScreen.missionTitle.TitleAnimation(m_currentlevel, m_levels[m_currentlevel].caseName, m_levels[m_currentlevel].planetName),
         Cx.Call(() => {
             if (m_currentPlanet.planetLeader != null)
             {

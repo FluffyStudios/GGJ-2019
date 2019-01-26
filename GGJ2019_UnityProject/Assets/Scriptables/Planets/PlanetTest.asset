@@ -23,7 +23,10 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Monsieur le maire
     m_speech: "Bienvenue sur Testaya inspecteur! C'est une plan\xE8te de test... Toute
-      notre existence n'est que brouillon!"
+      notre existence n'est que brouillon!Bienvenue sur Testaya inspecteur! C'est
+      une plan\xE8te de test... Toute notre existence n'est que brouillon!Bienvenue
+      sur Testaya inspecteur! C'est une plan\xE8te de test... Toute notre existence
+      n'est que brouillon!"
     m_accusedSpeech: "Comment osez-vous!? Esp\xE8ce de bougre!"
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
