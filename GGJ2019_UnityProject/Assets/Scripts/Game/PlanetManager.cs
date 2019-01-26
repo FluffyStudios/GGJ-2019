@@ -39,7 +39,8 @@ public class PlanetManager : MonoBehaviour
             Destroy(m_currentPlanet.gameObject);
         }
 
-        m_currentPlanet = Instantiate(m_planetPrefab) as Planet;
+        m_currentPlanet = Instantiate(m_planetPrefab, transform) as Planet;
+        m_currentPlanet.transform.position = new Vector3(0f, -6.2f, 0f);
         m_currentPlanet.Generate(planetDescriptor);
     }
 
