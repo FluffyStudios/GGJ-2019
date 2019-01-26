@@ -111,10 +111,17 @@ public class PlanetManager : MonoBehaviour
 
     private void Update()
     {
-        if (m_isRotating && m_currentPlanet != null)
-            PlanetRotation();
+        if (Game.CameraService.CurrentState != CameraManager.CameraState.InGame)
+        {
+            return;
+        }
 
-        if (m_currentState != LevelState.Ended && m_currentPlanet!=null)
+        if (m_isRotating && m_currentPlanet != null)
+        {
+            this.PlanetRotation();
+        }
+
+        if (m_currentState != LevelState.Ended && m_currentPlanet != null)
         {
             if (Input.GetMouseButtonDown(0))
             {
