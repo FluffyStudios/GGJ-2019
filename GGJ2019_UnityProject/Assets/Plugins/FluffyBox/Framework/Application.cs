@@ -75,5 +75,10 @@ namespace FluffyBox
             this.Bootstrapper.SetActive(false); 
 
         }
+
+        private void OnDestroy()
+        {
+            Services.ClearServices();
+        }
     }
 }

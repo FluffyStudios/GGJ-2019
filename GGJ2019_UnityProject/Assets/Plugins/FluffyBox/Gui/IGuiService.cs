@@ -9,5 +9,7 @@ namespace FluffyBox
         void HideWindow<T>(bool animated = true);
 
         void HideWindow(GuiWindow guiWindow, bool animated = true);
+
+        T GetWindow<T>() where T : GuiWindow;
     }
 }

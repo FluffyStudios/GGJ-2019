@@ -13,7 +13,8 @@ public class MissionTitle : MonoBehaviour
     [SerializeField] private RectTransform m_planetNameRect;
     [SerializeField] private float m_animSpeed;
     [SerializeField] private float m_remainingTime;
-    void Start()
+
+    void Awake()
     {
         gameObject.SetActive(false);
     }
@@ -26,6 +27,7 @@ public class MissionTitle : MonoBehaviour
         return Cx.Sequence(
                Cx.Call(() =>
                {
+                   Debug.Log("dans routine de title animation");
                    m_titleText.text = string.Format("Mission {0} : {1}", missionCount, missionName);
                    m_planetNameText.text = string.Format("Destination : {0}", planetName);
                    gameObject.SetActive(true);

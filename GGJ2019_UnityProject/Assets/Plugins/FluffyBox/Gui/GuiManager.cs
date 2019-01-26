@@ -87,6 +87,19 @@ namespace FluffyBox
                 guiWindow.Hide(animated);
             }
         }
+
+        public T GetWindow<T>() where T : GuiWindow
+        {
+            for (int i = 0; i < this.GuiWindows.Length; i++)
+            {
+                if (this.GuiWindows[i].GetType() == typeof(T))
+                {
+                    return this.GuiWindows[i] as T;
+                }
+            }
+
+            return null;
+        }
         
         private IEnumerator UpdateWindowsInteractionCoroutine()
         {

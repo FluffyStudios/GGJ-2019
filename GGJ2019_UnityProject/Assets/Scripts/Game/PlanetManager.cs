@@ -20,12 +20,13 @@ public class PlanetManager : MonoBehaviour
     [SerializeField] private PlanetSceneryElement m_doodadPrefab;
     public PlanetSceneryElement doodadPrefab { get { return m_doodadPrefab; } }
     [SerializeField] private PlanetDescriptor[] m_levels;
-    [SerializeField] float m_rotationSpeed = 5f;
-    [SerializeField] float m_swipDistMultiplier = 5f;
-    [SerializeField] float m_maxSwipDist = 5f;
-    [SerializeField] float m_minDetectionSwipDist = 2f;
-    [SerializeField] float m_rotationBrakeSmoothing = 0.2f;
-    [SerializeField] float m_planetTransitionAnimDuration = 2f;
+    [SerializeField] private float m_rotationSpeed = 5f;
+    [SerializeField] private float m_swipDistMultiplier = 5f;
+    [SerializeField] private float m_maxSwipDist = 5f;
+    [SerializeField] private float m_minDetectionSwipDist = 2f;
+    [SerializeField] private float m_rotationBrakeSmoothing = 0.2f;
+    [SerializeField] private float m_planetTransitionAnimDuration = 2f;
+    [SerializeField] private InGameScreen m_inGameScreen;
 
     public delegate void SelectCharAction(PlanetCharacter target, LevelState state);
     public static event SelectCharAction OnCharSelectedEvent;
@@ -66,20 +67,16 @@ public class PlanetManager : MonoBehaviour
         m_accusedCharacters = new HashSet<PlanetCharacter>();
     }
 
-    private void GeneratePlanet(PlanetDescriptor planetDescriptor)
+
+    public void StartMissionAnim()
     {
+        m_inGameScreen.CleanAllBubbles();
         m_currentState = LevelState.Starting;
         m_isRotating = false;
         m_isSliding = false;
-        if(m_currentPlanet != null)
-        {
-            m_previousPlanet = m_currentPlanet;
-        }
-
-        m_currentPlanet = Instantiate(m_planetPrefab, transform) as Planet;
-
         Cx.Routine NewPlanetArrival = Cx.Sequence(
-        InGameScreen.Instance.missionTitle.TitleAnimation(m_currentlevel, m_levels[m_currentlevel].caseName, m_levels[m_currentlevel].planetName),
+
+        m_inGameScreen.missionTitle.TitleAnimation(m_currentlevel, m_levels[m_currentlevel].caseName, m_levels[m_currentlevel].planetName),
         Cx.Call(() => {
             if (m_currentPlanet.planetLeader != null)
             {
@@ -91,16 +88,14 @@ public class PlanetManager : MonoBehaviour
             m_currentPlanet.planetLeader.PlaySelectionSound();
             m_activatedCharacter = m_currentPlanet.planetLeader;
             m_currentState = LevelState.Investigating;
-         }));
+        }));
 
         if (m_previousPlanet == null)
-        {
-            m_currentPlanet.transform.position = new Vector2(0f, -6.2f);
+        {            
             NewPlanetArrival.Start(this);
-        }        
+        }
         else
         {
-            m_currentPlanet.transform.position = new Vector2(50f, -6.2f);
             Cx.Sequence(
                    Cx.Parallel(
                        Cx.Call(() =>
@@ -114,17 +109,39 @@ public class PlanetManager : MonoBehaviour
                            Game.CameraService.Zoom(true);
                        })
                     ),
-                   
                    Cx.Call(() => {
                        Destroy(m_previousPlanet.gameObject);
                        // lancer affichage du nom de mission
                    }),
                    NewPlanetArrival
-                   
+
             ).Start(this);
-        }            
-        m_currentPlanet.Generate(planetDescriptor);
+        }
     }
+
+    private void GeneratePlanet(PlanetDescriptor planetDescriptor)
+    {
+        m_currentState = LevelState.Starting;
+        m_isRotating = false;
+        m_isSliding = false;
+        if (m_currentPlanet != null)
+        {
+            m_previousPlanet = m_currentPlanet;
+        }
+        m_currentPlanet = Instantiate(m_planetPrefab, transform) as Planet;
+        m_currentPlanet.Generate(planetDescriptor);
+
+        if (m_previousPlanet == null)
+        {
+            m_currentPlanet.transform.position = new Vector2(0f, -6.2f);
+
+        }
+        else
+        {
+            m_currentPlanet.transform.position = new Vector2(50f, -6.2f);
+        }
+    }
+
     private void Update()
     {
         if (Game.CameraService.CurrentState != CameraManager.CameraState.InGame || m_currentState == LevelState.Starting || m_currentState == LevelState.Ended)
@@ -250,6 +267,7 @@ public class PlanetManager : MonoBehaviour
         if (m_currentlevel < m_levels.Length - 1)
             m_currentlevel += 1;
         this.GeneratePlanet(m_levels[m_currentlevel]);
+        StartMissionAnim();
     }
 
     public void ResolveAccusation()

@@ -45,6 +45,11 @@ public class CameraManager : FluffyBox.Manager, ICameraService
         this.CurrentState = CameraState.InGame;
     }
 
+    public void ZoomOutEnded()
+    {
+        this.CurrentState = CameraState.MainMenu;
+    }
+
     public override void RegisterService()
     {
         FluffyBox.Services.AddService<ICameraService>(this);
