@@ -23,8 +23,9 @@ public class Planet : MonoBehaviour
     private int m_guiltyCount;
     public int guiltyCount { get { return m_guiltyCount; } }
     [SerializeField] private Transform m_entitiesParent;
-    [SerializeField] private SpriteRenderer m_planetCoreSprite;
-    [SerializeField] private float m_backRadius;
+    [SerializeField] private SpriteRenderer m_planetSceneryLayer;
+    [SerializeField] private SpriteRenderer m_planetGroundLayer;
+    [SerializeField] private SpriteRenderer m_planetFrontLayer;
     [SerializeField] private float m_frontRadius;
     public AudioSource AudioSource { get { return m_audioSource; } }
     [SerializeField] private AudioSource m_audioSource;
@@ -43,13 +44,23 @@ public class Planet : MonoBehaviour
         {
             InstanciateCharacter(characterDescriptor);           
         }
-
-        if (m_descriptor.planetTexture != null)
+        
+        if (m_descriptor.planetSceneryLayerTexture != null)
         {
-            m_planetCoreSprite.sprite = m_descriptor.planetTexture;
+            m_planetSceneryLayer.sprite = m_descriptor.planetSceneryLayerTexture;
         }
 
-        if(m_descriptor.planetLeader != null)
+        if (m_descriptor.planetFrontLayerTexture != null)
+        {
+            m_planetFrontLayer.sprite = m_descriptor.planetFrontLayerTexture;
+        }
+
+        if (m_descriptor.planetGroundLayerTexture != null)
+        {
+            m_planetGroundLayer.sprite = m_descriptor.planetGroundLayerTexture;
+        }
+
+        if (m_descriptor.planetLeader != null)
         {
             m_planetLeader = InstanciateCharacter(m_descriptor.planetLeader);
         }

@@ -8,7 +8,8 @@ public enum EntitySortingLayer
     Scenery = 1,
     Ground = 2,
     Character = 3,
-    UI = 4
+    Front = 4,
+    UI = 5
 }
 
 public abstract class PlanetEntityDescriptor

@@ -15,6 +15,7 @@ public class PlanetManager : MonoBehaviour
 {  
     public static PlanetManager Instance;
     [SerializeField] private Planet m_planetPrefab;
+    [SerializeField] private float m_planetPosY = -9f;
     [SerializeField] private PlanetCharacter m_characterPrefab;    
     public PlanetCharacter characterPrefab { get { return m_characterPrefab; } }
     [SerializeField] private PlanetSceneryElement m_doodadPrefab;
@@ -103,8 +104,8 @@ public class PlanetManager : MonoBehaviour
                        {
                            Game.CameraService.Zoom(false);
                        }),
-                       Cx.MoveTo(m_previousPlanet.gameObject, new Vector2(-50f, -6.2f), m_planetTransitionAnimDuration, false, Easing.EaseType.Linear),
-                       Cx.MoveTo(m_currentPlanet.gameObject, new Vector2(0f, -6.2f), m_planetTransitionAnimDuration, false, Easing.EaseType.Linear),
+                       Cx.MoveTo(m_previousPlanet.gameObject, new Vector2(-50f, m_planetPosY), m_planetTransitionAnimDuration, false, Easing.EaseType.Linear),
+                       Cx.MoveTo(m_currentPlanet.gameObject, new Vector2(0f, m_planetPosY), m_planetTransitionAnimDuration, false, Easing.EaseType.Linear),
                        Cx.CallLater(m_planetTransitionAnimDuration - 1f, () =>
                        {
                            Game.CameraService.Zoom(true);
@@ -134,12 +135,12 @@ public class PlanetManager : MonoBehaviour
 
         if (m_previousPlanet == null)
         {
-            m_currentPlanet.transform.position = new Vector2(0f, -6.2f);
+            m_currentPlanet.transform.position = new Vector2(0f, m_planetPosY);
 
         }
         else
         {
-            m_currentPlanet.transform.position = new Vector2(50f, -6.2f);
+            m_currentPlanet.transform.position = new Vector2(50f, m_planetPosY);
         }
 
         m_currentPlanet.PlayMusic();

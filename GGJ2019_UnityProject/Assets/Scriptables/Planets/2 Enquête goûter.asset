@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_caseName: L'affaire Popo
   m_planetName: Testaya
-  m_planetTexture: {fileID: 21300000, guid: c9231b7d31631fb4aa2107b5a4664da1, type: 3}
+  m_planetFrontLayerTexture: {fileID: 21300000, guid: 62b10d70e5c05494084546254f64c188,
+    type: 3}
+  m_planetGroundLayerTexture: {fileID: 21300000, guid: 9456c2a8b645ce64a81a5b88a51e365f,
+    type: 3}
+  m_planetSceneryLayerTexture: {fileID: 21300000, guid: 1ddc9b92b43f2ab45af909170ee83aae,
+    type: 3}
   m_planetMusic: {fileID: 8300000, guid: 60f0b10f4fe09154dbd31f87377f8da9, type: 3}
   m_planetLeader:
     m_entitySprite: {fileID: 21300000, guid: d57c24f0ed4846b44a0690251ece4536, type: 3}

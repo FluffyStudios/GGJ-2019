@@ -14,9 +14,17 @@ public class PlanetDescriptor : ScriptableObject
     public string planetName { get { return m_planetName; } }
 
     [SerializeField]
-    private Sprite m_planetTexture;
-    public Sprite planetTexture { get { return m_planetTexture; } }
-        
+    private Sprite m_planetFrontLayerTexture;
+    public Sprite planetFrontLayerTexture { get { return m_planetFrontLayerTexture; } }
+
+    [SerializeField]
+    private Sprite m_planetGroundLayerTexture;
+    public Sprite planetGroundLayerTexture { get { return m_planetGroundLayerTexture; } }
+
+    [SerializeField]
+    private Sprite m_planetSceneryLayerTexture;
+    public Sprite planetSceneryLayerTexture { get { return m_planetSceneryLayerTexture; } }
+
     [SerializeField]
     private AudioClip m_planetMusic;
     public AudioClip planetMusic { get { return m_planetMusic; } }
