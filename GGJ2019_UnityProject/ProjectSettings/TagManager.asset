@@ -42,3 +42,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Scenery
+    uniqueID: 2290343489
+    locked: 0
+  - name: Ground
+    uniqueID: 3189160891
+    locked: 0
+  - name: Character
+    uniqueID: 3916346699
+    locked: 0
+  - name: UI
+    uniqueID: 413379191
+    locked: 0
