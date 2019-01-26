@@ -42,6 +42,7 @@ public class MainGameScreen : FluffyBox.GuiScreen
     {
         Gui.GuiService.HideWindow<MainGameScreen>(false);
         Gui.GuiService.ShowWindow<InGameScreen>();
+        PlanetManager.Instance.StartMissionAnim();
     }
     
     protected override IEnumerator OnBeginShow(bool animated = true)

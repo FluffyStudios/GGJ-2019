@@ -7,7 +7,6 @@ using FluffyTools;
 
 public class InGameScreen : FluffyBox.GuiScreen
 {
-    public static InGameScreen Instance;
     [SerializeField] private Button m_accuseBtn;
     [SerializeField] private Button m_cancelAccuseBtn;
     [SerializeField] private Button m_validateAccuseBtn;
@@ -18,15 +17,6 @@ public class InGameScreen : FluffyBox.GuiScreen
     public MissionTitle missionTitle { get { return m_missionTitle; } }
     private Dictionary<PlanetCharacter, SpeechBubble> m_charactersToSpeeches;
 
-    void Awake()
-    {
-        if (Instance != null)
-            Destroy(Instance);
-        else
-            Instance = this;
-
-    }
-    // Start is called before the first frame update
     void Start()
     {
         m_charactersToSpeeches = new Dictionary<PlanetCharacter, SpeechBubble>();
@@ -55,6 +45,7 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_accuseBtn.gameObject.SetActive(false);
         m_accusationFilter.SetActive(true);
         PlanetManager.Instance.StartAccusation();
+
     }
 
     public void OnAccuseCanceled()
@@ -65,11 +56,7 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_accusationFilter.SetActive(false);
         PlanetManager.Instance.CancelAccusation();
 
-        foreach(KeyValuePair< PlanetCharacter, SpeechBubble > kv in m_charactersToSpeeches)
-        {           
-            Destroy(kv.Value.gameObject);
-        }
-        m_charactersToSpeeches.Clear();
+        CleanAllBubbles();
     }
 
     public void OnAccuseValidated()
@@ -79,8 +66,7 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_accuseBtn.gameObject.SetActive(false);
         m_accusationFilter.SetActive(false);
         PlanetManager.Instance.ResolveAccusation();
-        InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
-        Debug.Log(inGameScreen.name);
+        CleanAllBubbles();
     }
 
     public void OnQuitCb()
@@ -111,6 +97,15 @@ public class InGameScreen : FluffyBox.GuiScreen
             m_charactersToSpeeches.Add(character, currentBubble);
         }
         // s'il n'a pas déjà de speech enclenchée, créé la buble speech et l'ajouter au dico
+    }
+
+    public void CleanAllBubbles()
+    {
+        foreach (KeyValuePair<PlanetCharacter, SpeechBubble> kv in m_charactersToSpeeches)
+        {
+            Destroy(kv.Value.gameObject);
+        }
+        m_charactersToSpeeches.Clear();
     }
 
     private void OnCharUnSelected(PlanetCharacter character, LevelState state)
