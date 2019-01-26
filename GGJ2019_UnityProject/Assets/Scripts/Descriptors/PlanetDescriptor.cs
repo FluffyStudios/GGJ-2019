@@ -26,7 +26,7 @@ public class PlanetDescriptor : ScriptableObject
     public PlanetCharacterDescriptor[] planetCharacters { get { return m_planetCharacters; } }
 
     [SerializeField]
-    private PlanetCharacterDescriptor[] m_planetDoodads;
-    public PlanetCharacterDescriptor[] planetDoodads { get { return m_planetDoodads; } }
+    private PlanetDoodadDescriptor[] m_planetDoodads;
+    public PlanetDoodadDescriptor[] planetDoodads { get { return m_planetDoodads; } }
 
 }
