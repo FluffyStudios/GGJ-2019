@@ -20,8 +20,11 @@ public class InGameScreen : FluffyBox.GuiScreen
     public AccusationPopup accusationPopup { get { return m_accusationPopup; } }
 
     [SerializeField] private AudioSource m_AudioSource;
+    public AudioSource AudioSource { get { return m_AudioSource; } }
     [SerializeField] private AudioClip m_SuccessAudioClip;
+    public AudioClip SuccessAudioClip { get { return m_SuccessAudioClip; } }
     [SerializeField] private AudioClip m_FailAudioClip;
+    public AudioClip FailAudioClip { get { return m_FailAudioClip; } }
 
     private Dictionary<PlanetCharacter, SpeechBubble> m_charactersToSpeeches;
 
@@ -63,17 +66,6 @@ public class InGameScreen : FluffyBox.GuiScreen
         PlanetManager.Instance.ResolveAccusation();
 
         CleanAllBubbles();
-    }
-
-    public void OnAccuseSuccess()
-    {
-        this.m_AudioSource.PlayOneShot(this.m_SuccessAudioClip);
-    }
-
-    public void OnAccuseFailure()
-    {
-        this.OnAccuseCanceledCb();
-        this.m_AudioSource.PlayOneShot(this.m_FailAudioClip);
     }
 
     public void OnQuitCb()

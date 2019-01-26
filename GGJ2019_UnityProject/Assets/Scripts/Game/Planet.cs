@@ -68,6 +68,7 @@ public class Planet : MonoBehaviour
         if (m_descriptor.planetMusic != null)
         {
             m_audioSource.clip = m_descriptor.planetMusic;
+            this.m_audioSource.volume = FluffyBox.Application.Instance.MusicVolume;
         }
     }
 

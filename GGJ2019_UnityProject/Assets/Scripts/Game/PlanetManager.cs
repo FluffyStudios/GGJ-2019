@@ -267,23 +267,7 @@ public class PlanetManager : MonoBehaviour
     private void Failed()///// echec de l'accusation
     {
         InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
-        inGameScreen.OnAccuseFailure();
-        m_currentPlanet.AudioSource.volume = 0.1f;
-        Cx.CallLater(2.5f, () =>
-        {
-            m_currentPlanet.AudioSource.volume = 1f;
-        }).Start(this);
-
-        //Cx.Sequence(
-        //    Cx.Call(() =>
-        //    {
-        //        InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
-        //        inGameScreen.OnAccuseFailure();
-        //    }),
-        //    Cx.ValueTo(value => this.m_currentPlanet.AudioSource.volume = value, 1f, 0.25f, 0.5f),
-        //    Cx.Delay(1.5f),
-        //    Cx.ValueTo(value => this.m_currentPlanet.AudioSource.volume = value, 0.25f, 1f, 0.5f)
-        //);
+        inGameScreen.OnAccuseCanceledCb();
     }
 
     private void Win()
@@ -292,9 +276,6 @@ public class PlanetManager : MonoBehaviour
             m_currentlevel += 1;
         this.GeneratePlanet(m_levels[m_currentlevel]);
         StartMissionAnim();
-
-        InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
-        inGameScreen.OnAccuseSuccess();
     }
 
     public void ResolveAccusation()
@@ -312,6 +293,7 @@ public class PlanetManager : MonoBehaviour
                 asFailed = true;
             }
         }
+
         InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
         Cx.Sequence(
             inGameScreen.accusationPopup.ValidateAccusationPopupAnim(!asFailed),
@@ -352,4 +334,12 @@ public class PlanetManager : MonoBehaviour
             m_isRotating = false;
     }
 
+    public void MufflePlanetMusic(float duration)
+    {
+        m_currentPlanet.AudioSource.volume = 0.1f;
+        Cx.CallLater(duration, () =>
+        {
+            m_currentPlanet.AudioSource.volume = FluffyBox.Application.Instance.MusicVolume;
+        }).Start(this);
+    }
 }

@@ -7,6 +7,7 @@ namespace FluffyBox
         public UnityEngine.GameObject Bootstrapper;
         public UnityEngine.GameObject GameRoot;
         public UnityEngine.GameObject SkyboxCamera;
+        public float MusicVolume = 0.75f;
 
         private static Application instance;
         public static Application Instance

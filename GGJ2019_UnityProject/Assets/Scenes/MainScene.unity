@@ -266,7 +266,7 @@ MonoBehaviour:
   m_maxSwipDist: 20
   m_minDetectionSwipDist: 3
   m_rotationBrakeSmoothing: 3
-  m_planetTransitionAnimDuration: 2
+  m_planetTransitionAnimDuration: 3
 --- !u!1 &370260335
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,6 +613,7 @@ MonoBehaviour:
   Bootstrapper: {fileID: 370260335}
   GameRoot: {fileID: 242212634}
   SkyboxCamera: {fileID: 184287732}
+  MusicVolume: 0.75
   Version: 0.1
 --- !u!4 &637928019
 Transform:

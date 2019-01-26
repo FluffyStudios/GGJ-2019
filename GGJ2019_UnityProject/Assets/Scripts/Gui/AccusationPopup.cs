@@ -85,7 +85,10 @@ public class AccusationPopup : MonoBehaviour
                Cx.ValueTo((float f) => m_portraitRect.anchoredPosition = new Vector2(f, startPortraitPos.y), portraitInPos.x, portraitInPos.x + m_portraitSlowDecalValue, m_ValidationRemainingTime),
                Cx.Call(() =>
                {
-                   resultGo.SetActive(true);
+               resultGo.SetActive(true);
+                   InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
+                   PlanetManager.Instance.MufflePlanetMusic(2f);
+                   inGameScreen.AudioSource.PlayOneShot(asWon ? inGameScreen.SuccessAudioClip : inGameScreen.FailAudioClip);
                }),
                Cx.Delay(2f),
                Cx.Parallel(
