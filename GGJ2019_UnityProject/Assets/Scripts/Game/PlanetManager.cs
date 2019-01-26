@@ -157,7 +157,9 @@ public class PlanetManager : MonoBehaviour
                 Failed();         
                 return;
             }
-        }      
+        }
+
+        Win();
     }
 
     public void CancelAccusation()
