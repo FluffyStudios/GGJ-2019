@@ -630,6 +630,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &672769194 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6062456780706937953, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
+    type: 3}
+  m_PrefabInstance: {fileID: 393738748216466656}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfcf5cd11b3c3b640a19e1bae2b6206f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &741733930
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1254,6 +1266,10 @@ PrefabInstance:
     - target: {fileID: 1494718909, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 672769194}
+    - target: {fileID: 1494718909, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnAccuseBtnClick
       objectReference: {fileID: 0}
     - target: {fileID: 1303430376, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1270,6 +1286,10 @@ PrefabInstance:
     - target: {fileID: 1303430373, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 672769194}
+    - target: {fileID: 1303430373, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnAccuseCanceled
       objectReference: {fileID: 0}
     - target: {fileID: 1336094485, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
       propertyPath: m_AnchorMin.y
@@ -1286,6 +1306,10 @@ PrefabInstance:
     - target: {fileID: 1336094486, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
+      objectReference: {fileID: 672769194}
+    - target: {fileID: 1336094486, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnAccuseValidated
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
