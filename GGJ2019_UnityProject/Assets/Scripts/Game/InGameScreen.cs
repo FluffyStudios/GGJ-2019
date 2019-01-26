@@ -55,7 +55,6 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_accuseBtn.gameObject.SetActive(false);
         m_accusationFilter.SetActive(true);
         PlanetManager.Instance.StartAccusation();
-
     }
 
     public void OnAccuseCanceled()
@@ -80,6 +79,8 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_accuseBtn.gameObject.SetActive(false);
         m_accusationFilter.SetActive(false);
         PlanetManager.Instance.ResolveAccusation();
+        InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
+        Debug.Log(inGameScreen.name);
     }
 
     public void OnQuitCb()
