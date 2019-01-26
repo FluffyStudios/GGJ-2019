@@ -11,6 +11,7 @@ public class InGameScreen : FluffyBox.GuiScreen
     public Button accuseBtn { get { return m_accuseBtn; } }
     [SerializeField] private Button m_cancelAccuseBtn;
     [SerializeField] private Button m_validateAccuseBtn;
+    public Button validateAccuseBtn { get { return m_validateAccuseBtn; } }
     [SerializeField] private GameObject m_accusationFilter;
     [SerializeField] private SpeechBubble m_speechBubblePrefab;
     [SerializeField] private Transform m_speechBubblecontent;
@@ -41,10 +42,10 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_accusationPopup.AccusationPopupAnim().Start(this);
         m_cancelAccuseBtn.gameObject.SetActive(true);
         m_validateAccuseBtn.gameObject.SetActive(true);
+        m_validateAccuseBtn.interactable = false;
         m_accuseBtn.gameObject.SetActive(false);
         m_accusationFilter.SetActive(true);
         PlanetManager.Instance.StartAccusation();
-
     }
 
     public void OnAccuseCanceledCb()

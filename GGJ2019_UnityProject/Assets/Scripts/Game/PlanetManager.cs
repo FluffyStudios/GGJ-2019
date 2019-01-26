@@ -254,8 +254,11 @@ public class PlanetManager : MonoBehaviour
                     OnCharSelectedEvent(charTouched, m_currentState);
                 }
                 charTouched.PlayAccusedSound();
-                m_accusedCharacters.Add(charTouched);
+                m_accusedCharacters.Add(charTouched);                
             }
+            
+            InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
+            inGameScreen.validateAccuseBtn.interactable = m_accusedCharacters.Count > 0;
         }
         else
             return;      
