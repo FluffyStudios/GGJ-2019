@@ -14,6 +14,10 @@ public class PlanetCharacterDescriptor : PlanetEntity
     public string speech { get { return m_speech; } }
 
     [SerializeField]
+    private string m_accusedSpeech;
+    public string accusedSpeech { get { return m_accusedSpeech; } }
+
+    [SerializeField]
     private bool m_isGuilty;
     public bool isGuilty { get { return m_isGuilty; } }
 
