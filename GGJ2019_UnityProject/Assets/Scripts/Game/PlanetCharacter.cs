@@ -5,10 +5,11 @@ using UnityEngine;
 public class PlanetCharacter : MonoBehaviour
 {
     [SerializeField] private SpriteRenderer m_spriteRenderer;
+    public SpriteRenderer spriteRenderer { get { return m_spriteRenderer; } }
     private PlanetCharacterDescriptor m_descriptor;
     public PlanetCharacterDescriptor descriptor { get { return m_descriptor; } }
 
-    public PlanetCharacter(PlanetCharacterDescriptor charDescriptor)
+    public void InitializeCharacter(PlanetCharacterDescriptor charDescriptor)
     {
         m_descriptor = charDescriptor;
         if (m_descriptor.entitySprite != null)
