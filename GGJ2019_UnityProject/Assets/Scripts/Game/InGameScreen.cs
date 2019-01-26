@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using FluffyTools;
 
 public class InGameScreen : FluffyBox.GuiScreen
@@ -56,6 +57,7 @@ public class InGameScreen : FluffyBox.GuiScreen
         PlanetManager.Instance.StartAccusation();
 
     }
+
     public void OnAccuseCanceled()
     {
         m_cancelAccuseBtn.gameObject.SetActive(false);
@@ -78,6 +80,14 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_accuseBtn.gameObject.SetActive(false);
         m_accusationFilter.SetActive(false);
         PlanetManager.Instance.ResolveAccusation();
+    }
+
+    public void OnQuitCb()
+    {
+        ICameraService cameraService = FluffyBox.Services.GetService<ICameraService>();
+        cameraService.Zoom(false);
+        Gui.GuiService.HideWindow<InGameScreen>();
+        Gui.GuiService.ShowWindow<MainGameScreen>(false);
     }
 
     private void OnCharSelected(PlanetCharacter character, LevelState state)
@@ -113,4 +123,5 @@ public class InGameScreen : FluffyBox.GuiScreen
         }
         // s'il est dans le dico, supprimer la speech et l'enlever du dico
     }
+
 }

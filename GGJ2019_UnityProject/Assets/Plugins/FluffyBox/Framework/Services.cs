@@ -43,5 +43,10 @@ namespace FluffyBox
 
             return default(T);
         }
+
+        public static void ClearServices()
+        {
+            Services.services.Clear();
+        }
     }
 }

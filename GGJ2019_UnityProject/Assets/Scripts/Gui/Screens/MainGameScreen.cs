@@ -34,17 +34,23 @@ public class MainGameScreen : FluffyBox.GuiScreen
         this.TitleAnimator.SetBool("Exit", true);
     }
 
-    public void OnZoomFinished()
+    public void OnZoomOutFinished()
+    {
+    }
+
+    public void OnZoomInFinished()
     {
         Gui.GuiService.HideWindow<MainGameScreen>(false);
         Gui.GuiService.ShowWindow<InGameScreen>();
     }
-
+    
     protected override IEnumerator OnBeginShow(bool animated = true)
     {
         yield return base.OnBeginShow(animated);
 
         this.GameService = FluffyBox.Services.GetService<IGameService>();
+
+        this.TitleAnimator.SetBool("Exit", false);
     }
 
     protected override void OnEndHide()

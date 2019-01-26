@@ -20,6 +20,6 @@ namespace FluffyBox
             yield break;
         }
 
-        public abstract void OnIgnitionCompleted();
+        public abstract void OnIgnitionCompleted();        
     }
 }
