@@ -11,7 +11,7 @@ public enum LevelState : byte
 }
 
 public class PlanetManager : MonoBehaviour
-{
+{  
     public static PlanetManager Instance;
     [SerializeField] private Planet m_planetPrefab;
     [SerializeField] private PlanetCharacter m_characterPrefab;
@@ -23,9 +23,13 @@ public class PlanetManager : MonoBehaviour
     [SerializeField] float m_minDetectionSwipDist = 2f;
     [SerializeField] float m_rotationBrakeSmoothing = 0.2f;
 
-    private int m_currentlevel;
-    private Planet m_currentPlanet;
+    public delegate void SelectCharAction(PlanetCharacter target, LevelState state);
+    public static event SelectCharAction OnCharSelectedEvent;
+    public static event SelectCharAction OnCharUnSelectedEvent;
+
     private LevelState m_currentState;
+    private int m_currentlevel;
+    private Planet m_currentPlanet;  
     private PlanetCharacter m_activatedCharacter;
     private Vector2 m_startTouch;
     private float m_rotationStrenght;//Specify Angle For Rotation
@@ -120,16 +124,66 @@ public class PlanetManager : MonoBehaviour
     }
     private void ResolveCharacterTouch(PlanetCharacter charTouched)
     {
-        if(m_currentState == LevelState.Investigating)
+        if (m_currentState == LevelState.Investigating)
         {
+            if(m_activatedCharacter != null)
+            {
+                if(m_activatedCharacter == charTouched)
+                {
+                    if (OnCharUnSelectedEvent != null)
+                    {
+                        OnCharUnSelectedEvent(charTouched, m_currentState);
+                    }
+                    m_activatedCharacter = null;
+                }
+                else
+                {
+                    if (OnCharUnSelectedEvent != null)
+                    {
+                        OnCharUnSelectedEvent(m_activatedCharacter, m_currentState);
+                    }
+                    if (OnCharSelectedEvent != null)
+                    {
+                        OnCharSelectedEvent(charTouched, m_currentState);
+                    }
+                    m_activatedCharacter = charTouched;
+                }
+            }
+            else
+            {
+                if (OnCharSelectedEvent != null)
+                {
+                    OnCharSelectedEvent(charTouched, m_currentState);
+                }
+                m_activatedCharacter = charTouched;
+            }
             // désafficher la replique du précédent character activé
-            m_activatedCharacter = charTouched;
-            // activer la replique du perso
+            
+            // activer la replique du perso          
         }
-        else if(m_currentState == LevelState.Accusing)
+        else if (m_currentState == LevelState.Accusing)
         {
-            m_accusedCharacters.Add(charTouched);
+            if (m_accusedCharacters.Contains(charTouched))
+            {
+                if (OnCharUnSelectedEvent != null)
+                {
+                    OnCharUnSelectedEvent(m_activatedCharacter, m_currentState);
+                }
+                m_accusedCharacters.Remove(charTouched);
+            }
+            else
+            {
+                if (OnCharSelectedEvent != null)
+                {
+                    OnCharSelectedEvent(charTouched, m_currentState);
+                }
+                m_accusedCharacters.Add(charTouched);
+            }
         }
+        else
+            return;
+
+        
     }
 
     private void Failed()///// echec de l'accusation
@@ -170,7 +224,15 @@ public class PlanetManager : MonoBehaviour
 
     public void StartAccusation()
     {
+        if (m_activatedCharacter != null)
+        {
+            if (OnCharUnSelectedEvent != null)
+            {
+                OnCharUnSelectedEvent(m_activatedCharacter, m_currentState);
+            }
+        }
         m_currentState = LevelState.Accusing;
+        
     }
 
 
