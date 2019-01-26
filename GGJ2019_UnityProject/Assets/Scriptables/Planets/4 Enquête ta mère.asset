@@ -1,0 +1,156 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c6936cdfda75546b9291589967fe92, type: 3}
+  m_Name: "4 Enqu\xEAte ta m\xE8re"
+  m_EditorClassIdentifier: 
+  m_caseName: L'affaire Popo
+  m_planetName: Deetektiv
+  m_planetTexture: {fileID: 21300000, guid: 7b95b210d142db2499fed26a34c38008, type: 3}
+  m_planetMusic: {fileID: 8300000, guid: 2af1b77964d5c6f41a8de69d26454086, type: 3}
+  m_planetLeader:
+    m_entitySprite: {fileID: 21300000, guid: d57c24f0ed4846b44a0690251ece4536, type: 3}
+    m_entityPos: 0
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: Monsieur le maire
+    m_speech: "La plan\xE8te Deetektiv vous souhaite la bienvenue. Tialo a eu un probl\xE8me.
+      Allez la voir !"
+    m_accusedSpeech: "C'est pas moi qui est mang\xE9 l'orange !"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  m_planetCharacters:
+  - m_entitySprite: {fileID: 21300000, guid: 41c6f94d80f9e034a9c63dcf97d30f5c, type: 3}
+    m_entityPos: 0
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: 'Death '
+    m_speech: "Je suis le gagnant du concours mais quelqu'un r\xE9duit ma r\xE9compense
+      en lambeau"
+    m_accusedSpeech: Mais c'est moi la victime !
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 6b4d731bb49028047a4a8c4c1fa3bc4f, type: 3}
+    m_entityPos: 30
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: Le coeur
+    m_speech: "J'\xE9tais avec C quand \xE7a s'est pass\xE9."
+    m_accusedSpeech: Comment osez-vous!?
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 588ac5b533407b74ab8b59d1f45e90db, type: 3}
+    m_entityPos: 60
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: fire
+    m_speech: "Nous \xE9tions  dans la f\xF4ret avec B"
+    m_accusedSpeech: Pas cool...
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
+    m_entityPos: 90
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: le gant
+    m_speech: "E poss\xE8de des ciseaux"
+    m_accusedSpeech: Non! j'ai rien fait!
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 120
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_speech: "J'ai pr\xEAt\xE9 mes ciseaux \xE0 L"
+    m_accusedSpeech: Je suis innocent monsieur!
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 150
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_speech: "J'ai vu G pr\xE8s de la r\xE9compense quand le malheureux \xE9v\xE8nement
+      est arriv\xE9"
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 180
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_speech: H et K feraient tout pour combler B
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 210
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_speech: "C d\xE9teste la for\xEAt jamais il ne trainerait l\xE0 bas"
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 240
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_speech: "J'\xE9tais avec A lorsque \xE7a s'est pass\xE9, ils \xE9taient plusieurs
+      et portaient du bleus"
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 270
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_speech: "I \xE9tait tellement jaloux de A pour la r\xE9compense"
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 300
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_speech: "B n'a jamais aim\xE9 A"
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 330
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_speech: "F \xE9tait le vrai gagnant de ce concours il \xE9tait tr\xE8s en col\xE8re
+      d'avoir perdu"
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 1
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+  m_planetDoodads: []
