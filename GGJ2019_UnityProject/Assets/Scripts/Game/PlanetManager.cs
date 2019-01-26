@@ -264,6 +264,22 @@ public class PlanetManager : MonoBehaviour
     {
         InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
         inGameScreen.OnAccuseFailure();
+        m_currentPlanet.AudioSource.volume = 0.1f;
+        Cx.CallLater(2.5f, () =>
+        {
+            m_currentPlanet.AudioSource.volume = 1f;
+        }).Start(this);
+
+        //Cx.Sequence(
+        //    Cx.Call(() =>
+        //    {
+        //        InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
+        //        inGameScreen.OnAccuseFailure();
+        //    }),
+        //    Cx.ValueTo(value => this.m_currentPlanet.AudioSource.volume = value, 1f, 0.25f, 0.5f),
+        //    Cx.Delay(1.5f),
+        //    Cx.ValueTo(value => this.m_currentPlanet.AudioSource.volume = value, 0.25f, 1f, 0.5f)
+        //);
     }
 
     private void Win()

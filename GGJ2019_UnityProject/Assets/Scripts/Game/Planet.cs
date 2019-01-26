@@ -26,6 +26,7 @@ public class Planet : MonoBehaviour
     [SerializeField] private SpriteRenderer m_planetCoreSprite;
     [SerializeField] private float m_backRadius;
     [SerializeField] private float m_frontRadius;
+    public AudioSource AudioSource { get { return m_audioSource; } }
     [SerializeField] private AudioSource m_audioSource;
     private PlanetCharacter m_planetLeader;
     public PlanetCharacter planetLeader { get { return m_planetLeader; } }

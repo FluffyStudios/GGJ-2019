@@ -996,8 +996,8 @@ MonoBehaviour:
   m_speechBubblecontent: {fileID: 522059193}
   m_missionTitle: {fileID: 741263020}
   m_AudioSource: {fileID: 393738748216466658}
-  m_SuccessAudioClip: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
-  m_FailAudioClip: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+  m_SuccessAudioClip: {fileID: 8300000, guid: 517256cbebc2f9d4798765b419f7467a, type: 3}
+  m_FailAudioClip: {fileID: 8300000, guid: 3cf23c2b6583254469dcc76e823a78f8, type: 3}
 --- !u!82 &393738748216466658
 AudioSource:
   m_ObjectHideFlags: 0
