@@ -1425,8 +1425,7 @@ MonoBehaviour:
   m_cancelAccuseBtn: {fileID: 7230082767072583292}
   m_validateAccuseBtn: {fileID: 2317244802098258196}
   m_accusationFilter: {fileID: 252926167}
-  m_speechBubblePrefab: {fileID: 6690403780403497053, guid: 31b73f426d4bf8b4c88329529d14a229,
-    type: 3}
+  m_speechBubblePrefab: {fileID: 97, guid: 31b73f426d4bf8b4c88329529d14a229, type: 3}
   m_speechBubblecontent: {fileID: 522059193}
   m_missionTitle: {fileID: 741263020}
   m_accusationPopup: {fileID: 5942628313748457087}
