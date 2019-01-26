@@ -254,6 +254,8 @@ MonoBehaviour:
   m_planetPrefab: {fileID: 58, guid: 971bc3cd0fb95c8439b61ca5fbae892a, type: 3}
   m_characterPrefab: {fileID: 4994190366104554033, guid: c91b069d504d14e49b93d452da6d89c7,
     type: 3}
+  m_doodadPrefab: {fileID: 1976143929159141176, guid: 7b6a2b9feeb018143b3d576ff9818a19,
+    type: 3}
   m_levels:
   - {fileID: 11400000, guid: a935ce5a439e7bb4cbb9ba595b9702cb, type: 2}
   m_rotationSpeed: 5
