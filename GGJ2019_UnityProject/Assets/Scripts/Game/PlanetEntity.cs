@@ -16,6 +16,14 @@ public abstract class PlanetEntity : MonoBehaviour
         m_descriptor = charDescriptor;
         if (m_descriptor.entitySprite != null)
             m_spriteRenderer.sprite = m_descriptor.entitySprite;
+
+        int sortingLayerIndex = (int)m_descriptor.sortingLayer;
+        if (sortingLayerIndex > 0 && sortingLayerIndex < SortingLayer.layers.Length)
+        {
+            m_spriteRenderer.sortingLayerID = SortingLayer.layers[sortingLayerIndex].id;
+        }
+
+        m_spriteRenderer.sortingOrder = m_descriptor.sortingOrder;
     }
 
     public void PlaySelectionSound()
