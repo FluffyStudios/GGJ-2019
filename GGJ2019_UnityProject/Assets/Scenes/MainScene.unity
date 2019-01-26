@@ -251,8 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5a4b5490b0b9b94ba4dfe4d7cf1f075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_planetPrefab: {fileID: 5126667106833932704, guid: 971bc3cd0fb95c8439b61ca5fbae892a,
-    type: 3}
+  m_planetPrefab: {fileID: 58, guid: 971bc3cd0fb95c8439b61ca5fbae892a, type: 3}
   m_characterPrefab: {fileID: 4994190366104554033, guid: c91b069d504d14e49b93d452da6d89c7,
     type: 3}
   m_levels:
@@ -262,6 +261,7 @@ MonoBehaviour:
   m_maxSwipDist: 10
   m_minDetectionSwipDist: 2
   m_rotationBrakeSmoothing: 2
+  m_planetTransitionAnimDuration: 2
 --- !u!1 &370260335
 GameObject:
   m_ObjectHideFlags: 0
@@ -459,7 +459,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 30
   m_TargetDisplay: 0
 --- !u!1 &442216378
 GameObject:
