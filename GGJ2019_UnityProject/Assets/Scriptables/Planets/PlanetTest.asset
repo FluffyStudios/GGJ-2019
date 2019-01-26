@@ -29,7 +29,7 @@ MonoBehaviour:
     m_entityPos: 15
     m_characterName: 'Death '
     m_speech: le coupable c'est pas moi!
-    m_accusedSpeech: 
+    m_accusedSpeech: Vous faites une grave erreur inspecteur!
     m_isGuilty: 1
     m_characterSound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
@@ -37,7 +37,7 @@ MonoBehaviour:
     m_entityPos: 45
     m_characterName: Le coeur
     m_speech: bonjour je suis un coeur
-    m_accusedSpeech: 
+    m_accusedSpeech: Comment osez-vous!?
     m_isGuilty: 0
     m_characterSound: {fileID: 0}
     m_accusedSound: {fileID: 0}
@@ -45,7 +45,7 @@ MonoBehaviour:
     m_entityPos: 150
     m_characterName: fire
     m_speech: "le voisin du crado dit toujours la v\xE9rit\xE9"
-    m_accusedSpeech: 
+    m_accusedSpeech: pas cool
     m_isGuilty: 0
     m_characterSound: {fileID: 0}
     m_accusedSound: {fileID: 0}
@@ -53,7 +53,7 @@ MonoBehaviour:
     m_entityPos: 240
     m_characterName: le gant
     m_speech: "bonjour tu peux m'enfiler s'il te pla\xEEt?"
-    m_accusedSpeech: 
+    m_accusedSpeech: Non! j'ai rien fait!
     m_isGuilty: 0
     m_characterSound: {fileID: 0}
     m_accusedSound: {fileID: 0}
@@ -62,7 +62,7 @@ MonoBehaviour:
     m_characterName: le livre
     m_speech: "le mec \xE0 ma gauche est un crado, le prochain \xE0 ma droite est
       un menteur"
-    m_accusedSpeech: 
+    m_accusedSpeech: Je suis innocent monsieur!
     m_isGuilty: 0
     m_characterSound: {fileID: 0}
     m_accusedSound: {fileID: 0}

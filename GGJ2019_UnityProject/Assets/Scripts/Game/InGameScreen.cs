@@ -52,6 +52,12 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_accuseBtn.gameObject.SetActive(true);
         m_accusationFilter.SetActive(false);
         PlanetManager.Instance.CancelAccusation();
+
+        foreach(KeyValuePair< PlanetCharacter, SpeechBubble > kv in m_charactersToSpeeches)
+        {           
+            Destroy(kv.Value.gameObject);
+        }
+        m_charactersToSpeeches.Clear();
     }
 
     public void OnAccuseValidated()

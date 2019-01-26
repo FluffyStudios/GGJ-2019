@@ -158,10 +158,7 @@ public class PlanetManager : MonoBehaviour
                 }
                 charTouched.PlaySelectionSound();
                 m_activatedCharacter = charTouched;
-            }
-            // désafficher la replique du précédent character activé
-            
-            // activer la replique du perso          
+            }      
         }
         else if (m_currentState == LevelState.Accusing)
         {
