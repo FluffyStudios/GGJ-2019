@@ -146,6 +146,7 @@ public class PlanetManager : MonoBehaviour
                     {
                         OnCharSelectedEvent(charTouched, m_currentState);
                     }
+                    charTouched.PlaySelectionSound();
                     m_activatedCharacter = charTouched;
                 }
             }
@@ -155,6 +156,7 @@ public class PlanetManager : MonoBehaviour
                 {
                     OnCharSelectedEvent(charTouched, m_currentState);
                 }
+                charTouched.PlaySelectionSound();
                 m_activatedCharacter = charTouched;
             }
             // désafficher la replique du précédent character activé
@@ -177,13 +179,12 @@ public class PlanetManager : MonoBehaviour
                 {
                     OnCharSelectedEvent(charTouched, m_currentState);
                 }
+                charTouched.PlayAccusedSound();
                 m_accusedCharacters.Add(charTouched);
             }
         }
         else
-            return;
-
-        
+            return;      
     }
 
     private void Failed()///// echec de l'accusation

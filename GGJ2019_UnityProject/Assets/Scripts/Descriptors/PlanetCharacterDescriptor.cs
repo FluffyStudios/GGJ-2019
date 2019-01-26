@@ -24,5 +24,8 @@ public class PlanetCharacterDescriptor : PlanetEntity
     [SerializeField]
     private AudioClip m_characterSound;
     public AudioClip characterSound { get { return m_characterSound; } }
+    [SerializeField]
+    private AudioClip m_accusedSound;
+    public AudioClip accusedSound { get { return m_accusedSound; } }
 
 }
