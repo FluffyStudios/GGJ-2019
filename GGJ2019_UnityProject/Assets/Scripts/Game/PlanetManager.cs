@@ -62,7 +62,7 @@ public class PlanetManager : MonoBehaviour
     private void Start()
     {
         GeneratePlanet(m_levels[m_currentlevel]);
-        m_currentState = LevelState.Investigating;
+        m_currentState = LevelState.Starting;
         m_accusedCharacters = new HashSet<PlanetCharacter>();
     }
 
@@ -77,9 +77,26 @@ public class PlanetManager : MonoBehaviour
         }
 
         m_currentPlanet = Instantiate(m_planetPrefab, transform) as Planet;
-        if(m_previousPlanet == null)
+
+        Cx.Routine NewPlanetArrival = Cx.Sequence(
+        InGameScreen.Instance.missionTitle.TitleAnimation(m_currentlevel, m_levels[m_currentlevel].caseName, m_levels[m_currentlevel].planetName),
+        Cx.Call(() => {
+            if (m_currentPlanet.planetLeader != null)
+            {
+                if (OnCharSelectedEvent != null)
+                {
+                    OnCharSelectedEvent(m_currentPlanet.planetLeader, m_currentState);
+                }
+            }
+            m_currentPlanet.planetLeader.PlaySelectionSound();
+            m_activatedCharacter = m_currentPlanet.planetLeader;
+            m_currentState = LevelState.Investigating;
+         }));
+
+        if (m_previousPlanet == null)
         {
             m_currentPlanet.transform.position = new Vector2(0f, -6.2f);
+            NewPlanetArrival.Start(this);
         }        
         else
         {
@@ -100,24 +117,17 @@ public class PlanetManager : MonoBehaviour
                    
                    Cx.Call(() => {
                        Destroy(m_previousPlanet.gameObject);
-                       InitializeNewLevel(m_currentPlanet);
                        // lancer affichage du nom de mission
-                   })
-                    ).Start(this);
+                   }),
+                   NewPlanetArrival
+                   
+            ).Start(this);
         }            
         m_currentPlanet.Generate(planetDescriptor);
     }
-
-    private void InitializeNewLevel(Planet planet)
-    {
-        // lancer anim affichage nom de mission
-        // lancer bulle de dialogue du leader de la planète
-        
-    }
-
     private void Update()
     {
-        if (Game.CameraService.CurrentState != CameraManager.CameraState.InGame)
+        if (Game.CameraService.CurrentState != CameraManager.CameraState.InGame || m_currentState == LevelState.Starting || m_currentState == LevelState.Ended)
         {
             return;
         }

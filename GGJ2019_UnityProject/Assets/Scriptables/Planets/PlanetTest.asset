@@ -16,60 +16,67 @@ MonoBehaviour:
   m_planetName: Testaya
   m_planetTexture: {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
   m_planetLeader:
-    m_entitySprite: {fileID: 0}
+    m_entitySprite: {fileID: 21300000, guid: d57c24f0ed4846b44a0690251ece4536, type: 3}
     m_entityPos: 0
     m_sortingLayer: 3
-    m_entitySound: {fileID: 0}
-    m_characterName: 
-    m_speech: 
-    m_accusedSpeech: 
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: Monsieur le maire
+    m_speech: "Bienvenue sur Testaya inspecteur! C'est une plan\xE8te de test... Toute
+      notre existence n'est que brouillon!"
+    m_accusedSpeech: "Comment osez-vous!? Esp\xE8ce de bougre!"
     m_isGuilty: 0
-    m_accusedSound: {fileID: 0}
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
   m_planetCharacters:
   - m_entitySprite: {fileID: 21300000, guid: 41c6f94d80f9e034a9c63dcf97d30f5c, type: 3}
-    m_entityPos: 15
+    m_entityPos: 20
     m_sortingLayer: 3
+    m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: 'Death '
     m_speech: le coupable c'est pas moi!
     m_accusedSpeech: Vous faites une grave erreur inspecteur!
     m_isGuilty: 1
-    m_accusedSound: {fileID: 0}
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
   - m_entitySprite: {fileID: 21300000, guid: 6b4d731bb49028047a4a8c4c1fa3bc4f, type: 3}
     m_entityPos: 45
     m_sortingLayer: 3
+    m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: Le coeur
     m_speech: bonjour je suis un coeur
     m_accusedSpeech: Comment osez-vous!?
     m_isGuilty: 0
-    m_accusedSound: {fileID: 0}
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
   - m_entitySprite: {fileID: 21300000, guid: 588ac5b533407b74ab8b59d1f45e90db, type: 3}
     m_entityPos: 150
     m_sortingLayer: 3
-    m_entitySound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: fire
     m_speech: "le voisin du crado dit toujours la v\xE9rit\xE9"
     m_accusedSpeech: pas cool
     m_isGuilty: 0
-    m_accusedSound: {fileID: 0}
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
   - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
     m_entityPos: 240
     m_sortingLayer: 3
+    m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: le gant
     m_speech: "bonjour tu peux m'enfiler s'il te pla\xEEt?"
     m_accusedSpeech: Non! j'ai rien fait!
     m_isGuilty: 0
-    m_accusedSound: {fileID: 0}
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
   - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
     m_entityPos: 270
     m_sortingLayer: 3
+    m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: le livre
     m_speech: "le mec \xE0 ma gauche est un crado, le prochain \xE0 ma droite est
       un menteur"
     m_accusedSpeech: Je suis innocent monsieur!
     m_isGuilty: 0
-    m_accusedSound: {fileID: 0}
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
   m_planetDoodads: []

@@ -6,14 +6,25 @@ using FluffyTools;
 
 public class InGameScreen : FluffyBox.GuiScreen
 {
+    public static InGameScreen Instance;
     [SerializeField] private Button m_accuseBtn;
     [SerializeField] private Button m_cancelAccuseBtn;
     [SerializeField] private Button m_validateAccuseBtn;
     [SerializeField] private GameObject m_accusationFilter;
     [SerializeField] private SpeechBubble m_speechBubblePrefab;
     [SerializeField] private Transform m_speechBubblecontent;
+    [SerializeField] private MissionTitle m_missionTitle;
+    public MissionTitle missionTitle { get { return m_missionTitle; } }
     private Dictionary<PlanetCharacter, SpeechBubble> m_charactersToSpeeches;
 
+    void Awake()
+    {
+        if (Instance != null)
+            Destroy(Instance);
+        else
+            Instance = this;
+
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +35,7 @@ public class InGameScreen : FluffyBox.GuiScreen
         PlanetManager.OnCharSelectedEvent += OnCharSelected;
         PlanetManager.OnCharUnSelectedEvent += OnCharUnSelected;
     }
-    
+
     public void OnAccuseBtnClick()
     {
         /*Cx.Sequence(
