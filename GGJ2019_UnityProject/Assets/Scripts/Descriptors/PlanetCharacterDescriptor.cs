@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class PlanetCharacterDescriptor : PlanetEntity
+public class PlanetCharacterDescriptor : PlanetEntityDescriptor
 {
     [SerializeField]
     private string m_characterName;
@@ -21,9 +21,7 @@ public class PlanetCharacterDescriptor : PlanetEntity
     private bool m_isGuilty;
     public bool isGuilty { get { return m_isGuilty; } }
 
-    [SerializeField]
-    private AudioClip m_characterSound;
-    public AudioClip characterSound { get { return m_characterSound; } }
+    
     [SerializeField]
     private AudioClip m_accusedSound;
     public AudioClip accusedSound { get { return m_accusedSound; } }

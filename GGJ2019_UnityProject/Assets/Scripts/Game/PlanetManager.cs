@@ -251,7 +251,7 @@ public class PlanetManager : MonoBehaviour
         }
         foreach(PlanetCharacter accused in m_accusedCharacters)
         {
-            if (!accused.descriptor.isGuilty)
+            if (!accused.GetCharacterDescriptor().isGuilty)
             {
                 Failed();         
                 return;

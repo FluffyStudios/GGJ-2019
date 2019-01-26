@@ -15,11 +15,11 @@ public class SpeechBubble : MonoBehaviour
         m_target = target.gameObject;
         if (state == LevelState.Accusing)
         {
-            m_bubbleText.text = target.descriptor.accusedSpeech;
+            m_bubbleText.text = target.GetCharacterDescriptor().accusedSpeech;
         }
         else if (state == LevelState.Investigating)
         {
-            m_bubbleText.text = target.descriptor.speech;
+            m_bubbleText.text = target.GetCharacterDescriptor().speech;
         }
         transform.position = new Vector2(m_target.transform.position.x, m_target.transform.position.y + 2.5f);
         gameObject.SetActive(true);

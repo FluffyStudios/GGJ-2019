@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public abstract class PlanetEntity
+public abstract class PlanetEntityDescriptor
 {
     [SerializeField]
     private Sprite m_entitySprite;
@@ -12,5 +12,9 @@ public abstract class PlanetEntity
     [SerializeField]
     private float m_entityPos;
     public float entityPos { get { return m_entityPos; } }
-    
+
+    [SerializeField]
+    private AudioClip m_entitySound;
+    public AudioClip entitySound { get { return m_entitySound; } }
+
 }
