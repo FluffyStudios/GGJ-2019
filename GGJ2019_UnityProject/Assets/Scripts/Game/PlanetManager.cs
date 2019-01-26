@@ -263,7 +263,7 @@ public class PlanetManager : MonoBehaviour
     private void Failed()///// echec de l'accusation
     {
         InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
-        inGameScreen.OnAccuseCanceled();
+        inGameScreen.OnAccuseFailure();
     }
 
     private void Win()
@@ -272,6 +272,9 @@ public class PlanetManager : MonoBehaviour
             m_currentlevel += 1;
         this.GeneratePlanet(m_levels[m_currentlevel]);
         StartMissionAnim();
+
+        InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
+        inGameScreen.OnAccuseSuccess();
     }
 
     public void ResolveAccusation()

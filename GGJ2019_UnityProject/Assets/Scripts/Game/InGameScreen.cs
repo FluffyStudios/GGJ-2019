@@ -16,6 +16,11 @@ public class InGameScreen : FluffyBox.GuiScreen
     [SerializeField] private Transform m_speechBubblecontent;
     [SerializeField] private MissionTitle m_missionTitle;
     public MissionTitle missionTitle { get { return m_missionTitle; } }
+
+    [SerializeField] private AudioSource m_AudioSource;
+    [SerializeField] private AudioClip m_SuccessAudioClip;
+    [SerializeField] private AudioClip m_FailAudioClip;
+
     private Dictionary<PlanetCharacter, SpeechBubble> m_charactersToSpeeches;
 
     void Start()
@@ -29,7 +34,7 @@ public class InGameScreen : FluffyBox.GuiScreen
         PlanetManager.OnCharUnSelectedEvent += OnCharUnSelected;
     }
 
-    public void OnAccuseBtnClick()
+    public void OnAccuseModeCb()
     {
         /*Cx.Sequence(
                Cx.Call(() =>
@@ -50,7 +55,7 @@ public class InGameScreen : FluffyBox.GuiScreen
 
     }
 
-    public void OnAccuseCanceled()
+    public void OnAccuseCanceledCb()
     {
         m_cancelAccuseBtn.gameObject.SetActive(false);
         m_validateAccuseBtn.gameObject.SetActive(false);
@@ -61,7 +66,7 @@ public class InGameScreen : FluffyBox.GuiScreen
         CleanAllBubbles();
     }
 
-    public void OnAccuseValidated()
+    public void OnAccuseValidatedCb()
     {
         m_cancelAccuseBtn.gameObject.SetActive(false);
         m_validateAccuseBtn.gameObject.SetActive(false);
@@ -70,6 +75,17 @@ public class InGameScreen : FluffyBox.GuiScreen
         PlanetManager.Instance.ResolveAccusation();
 
         CleanAllBubbles();
+    }
+
+    public void OnAccuseSuccess()
+    {
+        this.m_AudioSource.PlayOneShot(this.m_SuccessAudioClip);
+    }
+
+    public void OnAccuseFailure()
+    {
+        this.OnAccuseCanceledCb();
+        this.m_AudioSource.PlayOneShot(this.m_FailAudioClip);
     }
 
     public void OnQuitCb()
