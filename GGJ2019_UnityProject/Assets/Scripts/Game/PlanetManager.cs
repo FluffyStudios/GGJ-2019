@@ -296,22 +296,30 @@ public class PlanetManager : MonoBehaviour
 
     public void ResolveAccusation()
     {
+        bool asFailed = false;
         if(m_accusedCharacters.Count != m_currentPlanet.guiltyCount)
         {
-            Failed();
-            return;
+            asFailed = true;
         }
 
         foreach(PlanetCharacter accused in m_accusedCharacters)
         {
             if (!accused.GetCharacterDescriptor().isGuilty)
             {
-                Failed();         
-                return;
+                asFailed = true;
             }
         }
+        InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
+        Cx.Sequence(
+            inGameScreen.accusationPopup.ValidateAccusationPopupAnim(!asFailed),
+            Cx.Call(() =>
+            {
+                if (asFailed)
+                    Failed();
+                else
+                    Win();
 
-        Win();
+            })).Start(this);
     }
 
     public void CancelAccusation()
