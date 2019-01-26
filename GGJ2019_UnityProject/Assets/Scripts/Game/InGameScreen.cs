@@ -12,7 +12,6 @@ public class InGameScreen : FluffyBox.GuiScreen
     [SerializeField] private Button m_cancelAccuseBtn;
     [SerializeField] private Button m_validateAccuseBtn;
     public Button validateAccuseBtn { get { return m_validateAccuseBtn; } }
-    [SerializeField] private GameObject m_accusationFilter;
     [SerializeField] private SpeechBubble m_speechBubblePrefab;
     [SerializeField] private Transform m_speechBubblecontent;
     [SerializeField] private MissionTitle m_missionTitle;
@@ -32,7 +31,6 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_cancelAccuseBtn.gameObject.SetActive(false);
         m_validateAccuseBtn.gameObject.SetActive(false);
         m_accuseBtn.gameObject.SetActive(false);
-        m_accusationFilter.SetActive(false);
         PlanetManager.OnCharSelectedEvent += OnCharSelected;
         PlanetManager.OnCharUnSelectedEvent += OnCharUnSelected;
     }
@@ -44,7 +42,6 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_validateAccuseBtn.gameObject.SetActive(true);
         m_validateAccuseBtn.interactable = false;
         m_accuseBtn.gameObject.SetActive(false);
-        m_accusationFilter.SetActive(true);
         PlanetManager.Instance.StartAccusation();
     }
 
@@ -53,7 +50,6 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_cancelAccuseBtn.gameObject.SetActive(false);
         m_validateAccuseBtn.gameObject.SetActive(false);
         m_accuseBtn.gameObject.SetActive(true);
-        m_accusationFilter.SetActive(false);
         PlanetManager.Instance.CancelAccusation();
 
         CleanAllBubbles();
@@ -64,7 +60,6 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_cancelAccuseBtn.gameObject.SetActive(false);
         m_validateAccuseBtn.gameObject.SetActive(false);
         m_accuseBtn.gameObject.SetActive(false);
-        m_accusationFilter.SetActive(false);
         PlanetManager.Instance.ResolveAccusation();
 
         CleanAllBubbles();
