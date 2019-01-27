@@ -1,0 +1,122 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c6936cdfda75546b9291589967fe92, type: 3}
+  m_Name: 1 Enquete Dirty Story
+  m_EditorClassIdentifier: 
+  m_caseName: A dirty story
+  m_planetName: Fragrance
+  m_planetFrontLayerTexture: {fileID: 0}
+  m_planetGroundLayerTexture: {fileID: 0}
+  m_planetSceneryLayerTexture: {fileID: 0}
+  m_planetMusic: {fileID: 8300000, guid: 60f0b10f4fe09154dbd31f87377f8da9, type: 3}
+  m_planetLeader:
+    m_entitySprite: {fileID: 21300000, guid: d57c24f0ed4846b44a0690251ece4536, type: 3}
+    m_entityPos: 0
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: Johnny
+    m_reverse: 0
+    m_speech: 'Hello inspector. Someone soils our pretty planet ! I am very angry
+      ! '
+    m_accusedSpeech: Me ? I soil my PRETTY planet ? You fool
+    m_isGuilty: 1
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  m_planetCharacters:
+  - m_entitySprite: {fileID: 21300000, guid: 41c6f94d80f9e034a9c63dcf97d30f5c, type: 3}
+    m_entityPos: 40
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: Denis
+    m_reverse: 0
+    m_speech: I think I will leave this planet ... I made  a mistake
+    m_accusedSpeech: '...'
+    m_isGuilty: 1
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 6b4d731bb49028047a4a8c4c1fa3bc4f, type: 3}
+    m_entityPos: 100
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: Mia
+    m_reverse: 0
+    m_speech: I am so sad this planet is dirty now. But Julian helps me to clean the
+      dirt
+    m_accusedSpeech: 'I love this planet ! '
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 588ac5b533407b74ab8b59d1f45e90db, type: 3}
+    m_entityPos: 150
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: 'Julian '
+    m_reverse: 0
+    m_speech: How are you inspector ? You progress in your investigation ?
+    m_accusedSpeech: Who are you to judge me ?
+    m_isGuilty: 1
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
+    m_entityPos: 240
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: Miranda
+    m_reverse: 0
+    m_speech: I never like the mayor, he can make everything to accomplish his own
+      ends
+    m_accusedSpeech: Hey I will punch you !
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
+    m_entityPos: 280
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: Anita
+    m_reverse: 0
+    m_speech: Julian and Denis are good friends. They always made foolishness together.
+    m_accusedSpeech: You are wrong !
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
+    m_entityPos: 300
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: Micheal
+    m_reverse: 0
+    m_speech: Denis made this. I saw him, but he wasn't alone.
+    m_accusedSpeech: I said it's Julian !
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
+    m_entityPos: 320
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: Richard
+    m_reverse: 0
+    m_speech: 'The mayor is fall in love to Mia, but Mia prefer Julian company '
+    m_accusedSpeech: Are you serious ?
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  m_planetDoodads: []
