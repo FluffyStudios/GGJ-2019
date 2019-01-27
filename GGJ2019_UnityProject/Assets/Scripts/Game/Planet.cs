@@ -36,12 +36,14 @@ public class Planet : MonoBehaviour
     private int spamCount = 0;
     private PlanetCharacter m_lastSpeaker;
     private Dictionary<PlanetCharacter, PlanetCharacter> m_spamSecretLinks; // secretOwner, spamTarget
+    private List<PlanetCharacter> m_soundSecretOwners;
 
     public void Generate(PlanetDescriptor planetDescriptor)
     {
         PlanetManager.OnCharSelectedEvent += OnCharSelected;
         m_planetCitizens = new List<PlanetCharacter>();
         m_spamSecretLinks = new Dictionary<PlanetCharacter, PlanetCharacter>();
+        m_soundSecretOwners = new List<PlanetCharacter>();
         m_descriptor = planetDescriptor;
         m_guiltyCount = 0;
         foreach (PlanetDoodadDescriptor doodadDescriptor in m_descriptor.planetDoodads)
@@ -128,7 +130,7 @@ public class Planet : MonoBehaviour
         {
             HiddenSpeechParams secret = citizen.GetCharacterDescriptor().secretSpeech;
             SpamRevealedSecret spamSecret = secret as SpamRevealedSecret;
-
+            AudioVolumeSecret soundSecret = secret as AudioVolumeSecret;
             if (spamSecret != null)
             {
                 int index = spamSecret.targetId;
@@ -136,6 +138,29 @@ public class Planet : MonoBehaviour
                     m_spamSecretLinks.Add(citizen, m_planetCitizens[index]);
                 // le citoyen a une phrase cachée à révélée
             }
+            if (soundSecret != null)
+            {
+                m_soundSecretOwners.Add(citizen);
+            }
+        }
+    }
+
+    public void CheckSoundModifiedSecrets(float volume)
+    {
+        if (m_soundSecretOwners.Count == 0)
+        {
+            return;
+        }
+            
+
+        foreach(PlanetCharacter character in m_soundSecretOwners)
+        {
+            AudioVolumeSecret secret = character.GetCharacterDescriptor().secretSpeech as AudioVolumeSecret;
+            if (secret != null && secret.volumeValueToUnlock == volume)
+                character.RevealSecret();
+            else
+                character.HideSecret();
+            
         }
     }
 

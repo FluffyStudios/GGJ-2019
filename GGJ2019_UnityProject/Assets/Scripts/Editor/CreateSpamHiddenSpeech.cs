@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class CreateSpamHiddenSpeech
 {
-    [MenuItem("Assets/Inspector Planet/Secret Speech / Spam secret speech")]
+    [MenuItem("Assets/Inspector Planet/Secret Speech / Spam secret")]
     public static SpamRevealedSecret Create()
     {
         SpamRevealedSecret asset = ScriptableObject.CreateInstance<SpamRevealedSecret>();

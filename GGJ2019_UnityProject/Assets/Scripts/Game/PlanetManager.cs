@@ -35,6 +35,7 @@ public class PlanetManager : MonoBehaviour
     private LevelState m_currentState;
     private int m_currentlevel;
     private Planet m_currentPlanet;
+    public Planet currentPlanet { get { return m_currentPlanet; } }
     private Planet m_previousPlanet;
     private PlanetCharacter m_activatedCharacter;
     private Vector2 m_startTouch;

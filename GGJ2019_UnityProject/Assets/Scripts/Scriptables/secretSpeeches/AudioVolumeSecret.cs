@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioVolumeSecret : HiddenSpeechParams
 {
     [SerializeField]
-    [Range(0f, 1f)]
-    private float m_volumeValueToUnlock;
-    public int volumeValueToUnlock { get { return volumeValueToUnlock; } }
+    [Range(0, 1)]
+    private int m_volumeValueToUnlock;
+    public int volumeValueToUnlock { get { return m_volumeValueToUnlock; } }
 }

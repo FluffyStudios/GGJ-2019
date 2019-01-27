@@ -67,11 +67,11 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: fire
     m_reverse: 0
-    m_speech: "le voisin du crado dit toujours la v\xE9rit\xE9"
+    m_speech: HEIN!? VOUS DITES QUOI!? J'ENTEND RIEN AVEC CETTE MUSIQUE!!
     m_accusedSpeech: pas cool
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
-    m_secretSpeech: {fileID: 0}
+    m_secretSpeech: {fileID: 11400000, guid: b5e864f210dcd8745be5c14f7ceb686a, type: 2}
   - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
     m_entityPos: 240
     m_sortingLayer: 3
