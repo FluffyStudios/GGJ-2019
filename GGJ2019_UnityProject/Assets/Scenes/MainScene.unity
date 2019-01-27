@@ -1479,6 +1479,11 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5942628313748457086, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 417558796417736902, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
         type: 3}
       propertyPath: m_AnchorMin.y
@@ -1504,6 +1509,19 @@ PrefabInstance:
       propertyPath: m_audioListener
       value: 
       objectReference: {fileID: 2027638118}
+    - target: {fileID: 2885497649303704008, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 522059193, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 741263017, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 4592095691320616873, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1608,6 +1626,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 25a739c4c5e37eb4b95c2cfa9b9f30c2,
         type: 3}
+    - target: {fileID: 5934281114869285098, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
 --- !u!224 &1949701874920379656 stripped
