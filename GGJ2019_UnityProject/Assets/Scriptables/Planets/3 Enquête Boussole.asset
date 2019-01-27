@@ -1,0 +1,184 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c6936cdfda75546b9291589967fe92, type: 3}
+  m_Name: "3 Enqu\xEAte larcin"
+  m_EditorClassIdentifier: 
+  m_caseName: L'affaire Popo
+  m_planetName: Testaya
+  m_planetFrontLayerTexture: {fileID: 21300000, guid: 62b10d70e5c05494084546254f64c188,
+    type: 3}
+  m_planetGroundLayerTexture: {fileID: 21300000, guid: 9456c2a8b645ce64a81a5b88a51e365f,
+    type: 3}
+  m_planetSceneryLayerTexture: {fileID: 21300000, guid: 1ddc9b92b43f2ab45af909170ee83aae,
+    type: 3}
+  m_planetMusic: {fileID: 8300000, guid: 2af1b77964d5c6f41a8de69d26454086, type: 3}
+  m_planetLeader:
+    m_entitySprite: {fileID: 21300000, guid: d57c24f0ed4846b44a0690251ece4536, type: 3}
+    m_entityPos: 0
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: Monsieur le maire
+    m_reverse: 0
+    m_speech: "Avez-vous fait bon voyage ? Nous sommes victimes de larcin, aidez-nous
+      \xE0 retrouver le coupable "
+    m_accusedSpeech: "\xCAtes-s\xFBr de ce que vous faites ?"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  m_planetCharacters:
+  - m_entitySprite: {fileID: 21300000, guid: 41c6f94d80f9e034a9c63dcf97d30f5c, type: 3}
+    m_entityPos: 0
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: 'Death '
+    m_reverse: 0
+    m_speech: Le voleur est un menteur
+    m_accusedSpeech: Vous faites une grave erreur inspecteur!
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 6b4d731bb49028047a4a8c4c1fa3bc4f, type: 3}
+    m_entityPos: 30
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: Le coeur
+    m_reverse: 0
+    m_speech: Nous sommes au nombres de douze
+    m_accusedSpeech: Comment osez-vous!?
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 588ac5b533407b74ab8b59d1f45e90db, type: 3}
+    m_entityPos: 60
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: fire
+    m_reverse: 0
+    m_speech: "Toujours se m\xE9fier des singes"
+    m_accusedSpeech: Pas cool...
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
+    m_entityPos: 90
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: le gant
+    m_reverse: 0
+    m_speech: G n'est pas un menteur
+    m_accusedSpeech: Non! j'ai rien fait!
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 120
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_reverse: 0
+    m_speech: Il n'y a pas de tortue
+    m_accusedSpeech: Je suis innocent monsieur!
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 150
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_reverse: 0
+    m_speech: Ce n'est pas un loup
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 180
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_reverse: 0
+    m_speech: Les coquets sont tous des menteurmais les menteurs ne sont pas tous
+      coquets
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 210
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_reverse: 0
+    m_speech: Il ne porte que des chapeaux
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 240
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_reverse: 0
+    m_speech: "Le voleur aime bien se reposer pr\xE8s d'un arbre"
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 270
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_reverse: 0
+    m_speech: Il y a un tier d'arbre par rapport au nombre d'habitant
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 300
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_reverse: 0
+    m_speech: "Il y a plus de la moiti\xE9 des habitants qui porte un Noeud Papillon"
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
+    m_entityPos: 330
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: le livre
+    m_reverse: 0
+    m_speech: "K raconte toujours la v\xE9rit\xE9"
+    m_accusedSpeech: "La v\xE9rit\xE9 c'est pas moi"
+    m_isGuilty: 1
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  m_planetDoodads: []
