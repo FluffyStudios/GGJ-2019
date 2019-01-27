@@ -82,17 +82,17 @@ MonoBehaviour:
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
   m_planetDoodads:
-  - m_entitySprite: {fileID: 21300000, guid: aed403b47ce000342a476170f1a8c4f5, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 407deba4b853ee24bb29c4bab37bb545, type: 3}
     m_entityPos: 320
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 0}
-  - m_entitySprite: {fileID: 21300000, guid: aed403b47ce000342a476170f1a8c4f5, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 407deba4b853ee24bb29c4bab37bb545, type: 3}
     m_entityPos: 0
     m_sortingLayer: 1
     m_sortingOrder: 0
     m_entitySound: {fileID: 0}
-  - m_entitySprite: {fileID: 21300000, guid: aed403b47ce000342a476170f1a8c4f5, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 407deba4b853ee24bb29c4bab37bb545, type: 3}
     m_entityPos: 180
     m_sortingLayer: 3
     m_sortingOrder: 0

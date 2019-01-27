@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEngine;
 
 namespace FluffyBox
 {
@@ -8,6 +9,7 @@ namespace FluffyBox
         public UnityEngine.GameObject GameRoot;
         public UnityEngine.GameObject SkyboxCamera;
         public float MusicVolume = 0.75f;
+        public AudioClip AccusationTheme;
 
         private static Application instance;
         public static Application Instance
