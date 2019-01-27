@@ -43,7 +43,10 @@ public class PlanetManager : MonoBehaviour
     private bool m_isRotating;//Check Whether Currently Object is Rotating Or Not.
     private bool m_isSliding;
     private bool m_hasLevelBeInitiated;
-    private int m_direction;//Direction Of Rotation
+    private float m_lastMousePosX;
+    private float m_timeMousePosChange;
+
+    private float m_direction;//Direction Of Rotation
     private HashSet<PlanetCharacter> m_accusedCharacters;
 
 
@@ -194,6 +197,7 @@ public class PlanetManager : MonoBehaviour
                     }
                 }            
                 m_startTouch = Input.mousePosition;
+                m_lastMousePosX = Input.mousePosition.x;
                 m_isSliding = true;                       
             }
             if (Input.GetMouseButtonUp(0))
@@ -204,15 +208,27 @@ public class PlanetManager : MonoBehaviour
             if (m_isSliding)
             {
                 Vector2 mousePos = Input.mousePosition;
-                if (mousePos.x - m_startTouch.x < 0)
+                if (mousePos.x == m_lastMousePosX)
+                {
+                    float delta = Time.time - m_timeMousePosChange;
+                    m_direction = Mathf.Lerp(1f, 0f, 1f);
+                }
+                else if (mousePos.x - m_lastMousePosX < 0)
+                {
                     m_direction = 1;
+                    m_timeMousePosChange = Time.time;
+                }
                 else
+                {
                     m_direction = -1;
+                    m_timeMousePosChange = Time.time;
+                }
 
                 float swipDist = Mathf.Abs(mousePos.x - m_startTouch.x);
                 m_rotationStrenght = m_rotationSpeed * Mathf.Min(m_maxSwipDist,(swipDist*m_swipDistMultiplier));
 
                 m_isRotating = true;
+                m_lastMousePosX = Input.mousePosition.x;
             }           
         }    
     }
@@ -299,8 +315,10 @@ public class PlanetManager : MonoBehaviour
 
     private void Win()
     {
-        if (m_currentlevel < m_levels.Length - 1)
-            m_currentlevel += 1;
+        m_currentlevel += 1;
+        if (m_currentlevel >= m_levels.Length)
+            m_currentlevel = 1;
+
         this.GeneratePlanet(m_levels[m_currentlevel]);
         StartMissionAnim();
     }

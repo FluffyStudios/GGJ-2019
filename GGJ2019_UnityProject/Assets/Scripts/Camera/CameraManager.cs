@@ -6,6 +6,7 @@ public class CameraManager : FluffyBox.Manager, ICameraService
 {
     public Camera MainCamera;
     public Animator MainCameraAnimator;
+    public AudioClip ZoomClip;
 
     private CameraState privateCurrentState;
 

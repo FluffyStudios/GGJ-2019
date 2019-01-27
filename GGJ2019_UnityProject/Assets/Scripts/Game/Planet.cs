@@ -25,6 +25,10 @@ public class Planet : MonoBehaviour
     public int guiltyCount { get { return m_guiltyCount; } }
     [SerializeField] private Transform m_entitiesParent;
     [SerializeField] private SpriteRenderer m_planetSceneryLayer;
+    [SerializeField] private Transform m_planetClouds1;
+    [SerializeField] private float m_planetClouds1Speed;
+    [SerializeField] private Transform m_planetClouds2;
+    [SerializeField] private float m_planetClouds2Speed;
     [SerializeField] private SpriteRenderer m_planetGroundLayer;
     [SerializeField] private SpriteRenderer m_planetFrontLayer;
     [SerializeField] private GameObject m_planetCoords;
@@ -193,5 +197,11 @@ public class Planet : MonoBehaviour
                 }
             }
         }
+    }
+    
+    private void Update()
+    {
+        this.m_planetClouds1.Rotate(0f, 0f, m_planetClouds1Speed);
+        this.m_planetClouds2.Rotate(0f, 0f, m_planetClouds2Speed);
     }
 }

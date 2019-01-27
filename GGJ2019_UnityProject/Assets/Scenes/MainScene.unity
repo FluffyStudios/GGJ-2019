@@ -259,8 +259,7 @@ MonoBehaviour:
     type: 3}
   m_levels:
   - {fileID: 11400000, guid: 831283c73213ca348a407c67328c06a9, type: 2}
-  - {fileID: 11400000, guid: 99ff6dd934883634f86fd2cd43505c36, type: 2}
-  - {fileID: 11400000, guid: 1a38ff83c47a03941bdfc2184a9b0ae3, type: 2}
+  - {fileID: 11400000, guid: 54f06ed74e479d4439e28a2a90afc3d0, type: 2}
   m_rotationSpeed: 4.5
   m_swipDistMultiplier: 0.3
   m_maxSwipDist: 20
@@ -463,7 +462,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 413379191
+  m_SortingLayerID: -121448533
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!1 &442216378
@@ -1030,6 +1029,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 2027638121}
   MainCameraAnimator: {fileID: 2027638122}
+  ZoomClip: {fileID: 0}
 --- !u!124 &2027638120
 Behaviour:
   m_ObjectHideFlags: 0
