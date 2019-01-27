@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c6936cdfda75546b9291589967fe92, type: 3}
+  m_Name: RadioPlanet
+  m_EditorClassIdentifier: 
+  m_caseName: Party hard
+  m_planetName: "Plan\xE8te Wave"
+  m_planetFrontLayerTexture: {fileID: 0}
+  m_planetGroundLayerTexture: {fileID: 0}
+  m_planetSceneryLayerTexture: {fileID: 0}
+  m_planetMusic: {fileID: 8300000, guid: 60f0b10f4fe09154dbd31f87377f8da9, type: 3}
+  m_planetLeader:
+    m_entitySprite: {fileID: 21300000, guid: 514294a0dbf284b448b97ba3c786cc3b, type: 3}
+    m_entityPos: 0
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: Maire de Wave
+    m_reverse: 0
+    m_speech: "Nous avons un probl\xE8me inspecteur! quelqu'un vole les appareils
+      des DJ sur ma jolie plan\xE8te... Attrapez-le!"
+    m_accusedSpeech: Comment osez-vous!?
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: f6403ffaf8e336d4ea63f72fc9496c44, type: 3}
+    m_secretSpeech: {fileID: 0}
+  m_planetCharacters:
+  - m_entitySprite: {fileID: 21300000, guid: 1ef63f3470658d740af95fd97b43d7a8, type: 3}
+    m_entityPos: 10
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 61a784fa189cbb742ae2b78b59cc4f87, type: 3}
+    m_characterName: Chipolata
+    m_reverse: 0
+    m_speech: "On est tous fans de musique ici \xE0 Wave!"
+    m_accusedSpeech: Vous faites une grave erreur inspecteur!
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 30ef07919369c3c4a9d3b7a824049508, type: 3}
+    m_entityPos: 45
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: DJ Laulau
+    m_reverse: 0
+    m_speech: "j'\xE9tais en train d'enregistrer mon dernier son, quand le voleur
+      s'est empar\xE9 de mon appareil d'enregistrement..."
+    m_accusedSpeech: Pas cool mec!
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: d7b1a2b4a01c3db419e160c6fb00fde8, type: 3}
+    m_entityPos: 100
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 8051b0dba661f9841ab4b4fa9f4d3222, type: 3}
+    m_characterName: DJ Rabeat
+    m_reverse: 0
+    m_speech: Moi? Ah non j'oserais jamais voler quoi que ce soit monsieur l'inspecteur,
+      je vous jure!
+    m_accusedSpeech: pas cool mec!
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: df833897e18803544a6f25658f9610e7, type: 3}
+    m_entityPos: 130
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: d2a55992722a4a6478630557b5f7126b, type: 3}
+    m_characterName: DJ Catseyes
+    m_reverse: 0
+    m_speech: "Si vous voulez mon avis, celui qui vole tous ces pr\xE9cieux outils
+      m\xE9rite la prison \xE0 vie!"
+    m_accusedSpeech: Non! j'ai rien fait!
+    m_isGuilty: 1
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: d7b1a2b4a01c3db419e160c6fb00fde8, type: 3}
+    m_entityPos: 180
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
+    m_characterName: Jeannot Lapin
+    m_reverse: 0
+    m_speech: QUOI!? QU'EST CE QUE VOUS DITES? J'ENTEND RIEN AVEC TOUT CE SON!
+    m_accusedSpeech: Je suis innocent monsieur!
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 11400000, guid: b5e864f210dcd8745be5c14f7ceb686a, type: 2}
+  - m_entitySprite: {fileID: 21300000, guid: 63ddbad9ba7eadd489dcd0c39bcd0dfa, type: 3}
+    m_entityPos: 230
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 61a784fa189cbb742ae2b78b59cc4f87, type: 3}
+    m_characterName: DJ Jean-Pierre
+    m_reverse: 0
+    m_speech: "Il y a des radios vol\xE9es abandonn\xE9es partout sur la plan\xE8te"
+    m_accusedSpeech: Pas cool mec!
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: b9d48c2c97c5a25449e672b687853332, type: 3}
+    m_entityPos: 270
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 517256cbebc2f9d4798765b419f7467a, type: 3}
+    m_characterName: Jeannot Lapin
+    m_reverse: 0
+    m_speech: "Ecoute-\xE7a c'est mon dernier son mec! \xE7a d\xE9chire hein?"
+    m_accusedSpeech: Je suis innocent monsieur!
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: 33b77bd482e16814094f9f9677a59675, type: 3}
+    m_entityPos: 330
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
+    m_characterName: Jeyjey
+    m_reverse: 0
+    m_speech: "Ici on est green, flex, toi t'as l'air plut\xF4t tendax! Chill dude..."
+    m_accusedSpeech: Je suis innocent monsieur!
+    m_isGuilty: 0
+    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 11400000, guid: b5e864f210dcd8745be5c14f7ceb686a, type: 2}
+  m_planetDoodads:
+  - m_entitySprite: {fileID: 21300000, guid: 1386a0b109836304d99e85c95785c9d9, type: 3}
+    m_entityPos: 60
+    m_sortingLayer: 3
+    m_sortingOrder: 1
+    m_entitySound: {fileID: 8300000, guid: 517256cbebc2f9d4798765b419f7467a, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 1386a0b109836304d99e85c95785c9d9, type: 3}
+    m_entityPos: 300
+    m_sortingLayer: 3
+    m_sortingOrder: 1
+    m_entitySound: {fileID: 8300000, guid: 517256cbebc2f9d4798765b419f7467a, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 1386a0b109836304d99e85c95785c9d9, type: 3}
+    m_entityPos: 250
+    m_sortingLayer: 3
+    m_sortingOrder: 1
+    m_entitySound: {fileID: 8300000, guid: d2a55992722a4a6478630557b5f7126b, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 1386a0b109836304d99e85c95785c9d9, type: 3}
+    m_entityPos: 220
+    m_sortingLayer: 4
+    m_sortingOrder: 1
+    m_entitySound: {fileID: 8300000, guid: 517256cbebc2f9d4798765b419f7467a, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 1386a0b109836304d99e85c95785c9d9, type: 3}
+    m_entityPos: 140
+    m_sortingLayer: 4
+    m_sortingOrder: 1
+    m_entitySound: {fileID: 8300000, guid: 517256cbebc2f9d4798765b419f7467a, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 1386a0b109836304d99e85c95785c9d9, type: 3}
+    m_entityPos: 75
+    m_sortingLayer: 4
+    m_sortingOrder: 1
+    m_entitySound: {fileID: 8300000, guid: 517256cbebc2f9d4798765b419f7467a, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 1386a0b109836304d99e85c95785c9d9, type: 3}
+    m_entityPos: 35
+    m_sortingLayer: 4
+    m_sortingOrder: 1
+    m_entitySound: {fileID: 8300000, guid: 517256cbebc2f9d4798765b419f7467a, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 1386a0b109836304d99e85c95785c9d9, type: 3}
+    m_entityPos: 60
+    m_sortingLayer: 4
+    m_sortingOrder: 1
+    m_entitySound: {fileID: 8300000, guid: 517256cbebc2f9d4798765b419f7467a, type: 3}
