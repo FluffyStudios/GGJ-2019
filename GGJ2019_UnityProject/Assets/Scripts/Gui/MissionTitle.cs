@@ -32,7 +32,7 @@ public class MissionTitle : MonoBehaviour
                    
                    Debug.Log("dans routine de title animation");
                    m_titleText.text = string.Format("Mission {0} : {1}", missionCount + 1, missionName);
-                   m_planetNameText.text = string.Format("Destination : {0}", planetName);
+                   m_planetNameText.text = string.Format("Planète {0}", planetName);
                    gameObject.SetActive(true);
                }),
                Cx.Parallel(
