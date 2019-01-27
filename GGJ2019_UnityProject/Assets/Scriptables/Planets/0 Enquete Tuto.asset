@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c6936cdfda75546b9291589967fe92, type: 3}
   m_Name: 0 Enquete Tuto
   m_EditorClassIdentifier: 
-  m_caseName: My first investigation
+  m_caseName: "Ma premi\xE8re enqu\xEAte"
   m_planetName: Tutoya
   m_planetFrontLayerTexture: {fileID: 0}
   m_planetGroundLayerTexture: {fileID: 0}
@@ -24,11 +24,11 @@ MonoBehaviour:
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
-    m_characterName: Mister Mayor
+    m_characterName: Maire de Tutoya
     m_reverse: 0
-    m_speech: Welcome to Tutoya. I am the mayor ! A villager broke my jar ! Touch
-      a character to talk with them, they can help you.
-    m_accusedSpeech: How dare you ? You are a bad guy !
+    m_speech: "Bonjour Inspecteur! Je suis le maire de Tutoya! Quelqu'un a cass\xE9
+      mon vase! Parlez aux gens pour le retrouver!"
+    m_accusedSpeech: Comment osez-vous!?
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
@@ -38,22 +38,22 @@ MonoBehaviour:
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
-    m_characterName: Tom
+    m_characterName: Koko
     m_reverse: 0
-    m_speech: Swipe left to go left or swipe right to go right
-    m_accusedSpeech: You make a mistake mister !
+    m_speech: "Glisse ton doight sur la plan\xE8te pour la visiter!"
+    m_accusedSpeech: "Vous fa\xEEtes une grave erreur monsieur!"
     m_isGuilty: 0
-    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_accusedSound: {fileID: 8300000, guid: f6403ffaf8e336d4ea63f72fc9496c44, type: 3}
     m_secretSpeech: {fileID: 0}
-  - m_entitySprite: {fileID: 21300000, guid: 1ef63f3470658d740af95fd97b43d7a8, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 63ddbad9ba7eadd489dcd0c39bcd0dfa, type: 3}
     m_entityPos: 45
     m_sortingLayer: 3
     m_sortingOrder: 0
-    m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
-    m_characterName: Donald
+    m_entitySound: {fileID: 8300000, guid: d2a55992722a4a6478630557b5f7126b, type: 3}
+    m_characterName: Tibo le blaireau
     m_reverse: 0
-    m_speech: To blame the guilty, touch the button Blame and select the guilty !
-    m_accusedSpeech: You accuse the wrong guy !
+    m_speech: Pour accuser quelqu'un, touche le bouton en haut en gauche!
+    m_accusedSpeech: Vous vous trompez de personne inspecteur!
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
@@ -62,10 +62,10 @@ MonoBehaviour:
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
-    m_characterName: Stefan
+    m_characterName: Jackie la maladroite
     m_reverse: 0
-    m_speech: Hey Inspector !
-    m_accusedSpeech: Not cool !
+    m_speech: Coucou inspecteur!
+    m_accusedSpeech: "Euh... vous \xEAtes vraiment sur de vous?"
     m_isGuilty: 1
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
@@ -76,9 +76,24 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Eve
     m_reverse: 0
-    m_speech: Psst, the guy on my left is the guilty
-    m_accusedSpeech: I did nothing mister !
+    m_speech: "Psst, le chat l\xE0-bas \xE0 gauche est le coupable!"
+    m_accusedSpeech: j'ai rien fait monsieur!
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
-  m_planetDoodads: []
+  m_planetDoodads:
+  - m_entitySprite: {fileID: 21300000, guid: aed403b47ce000342a476170f1a8c4f5, type: 3}
+    m_entityPos: 320
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: aed403b47ce000342a476170f1a8c4f5, type: 3}
+    m_entityPos: 0
+    m_sortingLayer: 1
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 0}
+  - m_entitySprite: {fileID: 21300000, guid: aed403b47ce000342a476170f1a8c4f5, type: 3}
+    m_entityPos: 180
+    m_sortingLayer: 3
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 0}
