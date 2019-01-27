@@ -94,7 +94,7 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: Jeannot Lapin
     m_reverse: 0
-    m_speech: QUOI!? QU'EST CE QUE VOUS DITES? J'ENTEND RIEN AVEC TOUT CE SON!
+    m_speech: QUOI!? QU'EST CE QUE VOUS DITES? J'ENTEND RIEN! ETEIGNEZ-MOI CE SON!
     m_accusedSpeech: Je suis innocent monsieur!
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
