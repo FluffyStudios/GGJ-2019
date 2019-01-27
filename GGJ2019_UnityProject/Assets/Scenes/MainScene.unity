@@ -612,7 +612,7 @@ MonoBehaviour:
   Bootstrapper: {fileID: 370260335}
   GameRoot: {fileID: 242212634}
   SkyboxCamera: {fileID: 184287732}
-  MusicVolume: 0.75
+  MusicVolume: 0.35
   Version: 0.1
 --- !u!4 &637928019
 Transform:
@@ -754,7 +754,7 @@ PrefabInstance:
     - target: {fileID: 1589386707825501680, guid: 9578deb2a470ccd489cf693a4704479c,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -42.000122
+      value: -42.00006
       objectReference: {fileID: 0}
     - target: {fileID: 114926111568729826, guid: 9578deb2a470ccd489cf693a4704479c,
         type: 3}
@@ -986,6 +986,7 @@ GameObject:
   - component: {fileID: 2027638119}
   - component: {fileID: 2027638122}
   - component: {fileID: 2027638123}
+  - component: {fileID: 2027638124}
   m_Layer: 0
   m_Name: '[MainCamera]'
   m_TagString: MainCamera
@@ -1029,7 +1030,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainCamera: {fileID: 2027638121}
   MainCameraAnimator: {fileID: 2027638122}
-  ZoomClip: {fileID: 0}
+  AudioSource: {fileID: 2027638124}
+  ZoomClip: {fileID: 8300000, guid: 740b5545a35d3ff4ea5f6a7ec186875f, type: 3}
+  UnzoomClip: {fileID: 8300000, guid: c42b34b4cdbb9b1499f7d06773e750aa, type: 3}
 --- !u!124 &2027638120
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1112,6 +1115,102 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile: {fileID: 11400000, guid: 7f390ef55c3794543be8ab54b3df1fa5, type: 2}
+--- !u!82 &2027638124
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027638116}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &2096505777
 PrefabInstance:
   m_ObjectHideFlags: 0

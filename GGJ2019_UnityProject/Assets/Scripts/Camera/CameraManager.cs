@@ -6,7 +6,9 @@ public class CameraManager : FluffyBox.Manager, ICameraService
 {
     public Camera MainCamera;
     public Animator MainCameraAnimator;
+    public AudioSource AudioSource;
     public AudioClip ZoomClip;
+    public AudioClip UnzoomClip;
 
     private CameraState privateCurrentState;
 
@@ -39,6 +41,7 @@ public class CameraManager : FluffyBox.Manager, ICameraService
     {
         this.CurrentState = CameraState.Transition;
         this.MainCameraAnimator.SetBool("ZoomIn", zoomIn);
+        this.AudioSource.PlayOneShot(zoomIn ? this.ZoomClip : this.UnzoomClip);
     }
 
     public void ZoomInEnded()
