@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public static class PlanetMathHelper
@@ -31,20 +32,31 @@ public class Planet : MonoBehaviour
     [SerializeField] private AudioSource m_audioSource;
     private PlanetCharacter m_planetLeader;
     public PlanetCharacter planetLeader { get { return m_planetLeader; } }
+    private List<PlanetCharacter> m_planetCitizens;
+    private int spamCount = 0;
+    private PlanetCharacter m_lastSpeaker;
+    private Dictionary<PlanetCharacter, PlanetCharacter> m_spamSecretLinks; // secretOwner, spamTarget
+
     public void Generate(PlanetDescriptor planetDescriptor)
     {
+        PlanetManager.OnCharSelectedEvent += OnCharSelected;
+        m_planetCitizens = new List<PlanetCharacter>();
+        m_spamSecretLinks = new Dictionary<PlanetCharacter, PlanetCharacter>();
         m_descriptor = planetDescriptor;
         m_guiltyCount = 0;
-        foreach(PlanetDoodadDescriptor doodadDescriptor in m_descriptor.planetDoodads)
+        foreach (PlanetDoodadDescriptor doodadDescriptor in m_descriptor.planetDoodads)
         {
             InstanciateDoodad(doodadDescriptor);
         }
 
-        foreach(PlanetCharacterDescriptor characterDescriptor in m_descriptor.planetCharacters)
+        foreach (PlanetCharacterDescriptor characterDescriptor in m_descriptor.planetCharacters)
         {
-            InstanciateCharacter(characterDescriptor);           
+            PlanetCharacter citizen = InstanciateCharacter(characterDescriptor);
+            m_planetCitizens.Add(citizen);
         }
-        
+
+        RegisterSecretsLinks();
+
         if (m_descriptor.planetSceneryLayerTexture != null)
         {
             m_planetSceneryLayer.sprite = m_descriptor.planetSceneryLayerTexture;
@@ -90,11 +102,65 @@ public class Planet : MonoBehaviour
 
     private PlanetSceneryElement InstanciateDoodad(PlanetDoodadDescriptor doodadDescriptor)
     {
-        
+
         PlanetSceneryElement doodad = Instantiate(PlanetManager.Instance.doodadPrefab, m_entitiesParent, false) as PlanetSceneryElement;
         doodad.InitializeCharacter(doodadDescriptor);
         doodad.gameObject.transform.localPosition = PlanetMathHelper.FromPolar(m_frontRadius, doodad.descriptor.entityPos);
         doodad.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, -doodad.descriptor.entityPos);
         return doodad;
+    }
+
+    private void OnCharSelected(PlanetCharacter character, LevelState state)
+    {
+        if (Game.CameraService.CurrentState != CameraManager.CameraState.InGame)
+        {
+            return;
+        }
+
+        CheckSpamSecretReveal(character, m_lastSpeaker);
+        m_lastSpeaker = character;
+
+    }
+
+    private void RegisterSecretsLinks()
+    {
+        foreach (PlanetCharacter citizen in m_planetCitizens)
+        {
+            HiddenSpeechParams secret = citizen.GetCharacterDescriptor().secretSpeech;
+            SpamRevealedSecret spamSecret = secret as SpamRevealedSecret;
+
+            if (spamSecret != null)
+            {
+                int index = spamSecret.targetId;
+                if (index < m_planetCitizens.Count)
+                    m_spamSecretLinks.Add(citizen, m_planetCitizens[index]);
+                // le citoyen a une phrase cachée à révélée
+            }
+        }
+    }
+
+    private void CheckSpamSecretReveal(PlanetCharacter newSpeaker, PlanetCharacter lastSpeaker)
+    {
+        if (m_lastSpeaker != null && m_lastSpeaker != newSpeaker)
+        {
+            spamCount = 1;
+            return;
+        }
+        foreach (KeyValuePair<PlanetCharacter, PlanetCharacter> kv in m_spamSecretLinks)
+        {
+            
+            if(newSpeaker == kv.Value)
+            {
+                SpamRevealedSecret secret = kv.Key.GetCharacterDescriptor().secretSpeech as SpamRevealedSecret;
+                if (secret == null)
+                    return;
+                spamCount += 1;
+
+                if(spamCount >= secret.spamCountToUnlock)
+                {
+                    kv.Value.RevealSecret();
+                }
+            }
+        }
     }
 }

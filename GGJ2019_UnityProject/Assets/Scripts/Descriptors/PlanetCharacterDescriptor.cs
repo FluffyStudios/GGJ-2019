@@ -41,13 +41,7 @@ public class PlanetCharacterDescriptor : PlanetEntityDescriptor
     private AudioClip m_accusedSound;
     public AudioClip accusedSound { get { return m_accusedSound; } }
 
-    [Header("Hidden Speech Settings")]
     [SerializeField]
-    private bool m_hasHiddenSpeech;
-    public bool hasHiddenSpeech { get { return m_hasHiddenSpeech; } }
-
-    [SerializeField]
-    private string m_hiddenSpeech;
-    public string hiddenSpeech { get { return m_hiddenSpeech; } }
-
+    private HiddenSpeechParams m_secretSpeech;
+    public HiddenSpeechParams secretSpeech { get { return m_secretSpeech; } }
 }

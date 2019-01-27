@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_caseName: L'affaire du test
   m_planetName: Testaya
-  m_planetTexture: {fileID: 10305, guid: 0000000000000000f000000000000000, type: 0}
+  m_planetFrontLayerTexture: {fileID: 0}
+  m_planetGroundLayerTexture: {fileID: 0}
+  m_planetSceneryLayerTexture: {fileID: 0}
   m_planetMusic: {fileID: 8300000, guid: 60f0b10f4fe09154dbd31f87377f8da9, type: 3}
   m_planetLeader:
     m_entitySprite: {fileID: 21300000, guid: d57c24f0ed4846b44a0690251ece4536, type: 3}
@@ -23,6 +25,7 @@ MonoBehaviour:
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Monsieur le maire
+    m_reverse: 0
     m_speech: "Bienvenue sur Testaya inspecteur! C'est une plan\xE8te de test... Toute
       notre existence n'est que brouillon!Bienvenue sur Testaya inspecteur! C'est
       une plan\xE8te de test... Toute notre existence n'est que brouillon!Bienvenue
@@ -31,6 +34,7 @@ MonoBehaviour:
     m_accusedSpeech: "Comment osez-vous!? Esp\xE8ce de bougre!"
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
   m_planetCharacters:
   - m_entitySprite: {fileID: 21300000, guid: 41c6f94d80f9e034a9c63dcf97d30f5c, type: 3}
     m_entityPos: 20
@@ -38,49 +42,69 @@ MonoBehaviour:
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: 'Death '
+    m_reverse: 0
     m_speech: le coupable c'est pas moi!
     m_accusedSpeech: Vous faites une grave erreur inspecteur!
     m_isGuilty: 1
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 11400000, guid: 48dd9b35b3bfc624d892aae416a41251, type: 2}
   - m_entitySprite: {fileID: 21300000, guid: 6b4d731bb49028047a4a8c4c1fa3bc4f, type: 3}
     m_entityPos: 45
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: Le coeur
-    m_speech: bonjour je suis un coeur
+    m_reverse: 1
+    m_speech: "Si tu met la pression \xE0 la mort, il va tout te dire"
     m_accusedSpeech: Comment osez-vous!?
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
   - m_entitySprite: {fileID: 21300000, guid: 588ac5b533407b74ab8b59d1f45e90db, type: 3}
     m_entityPos: 150
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: fire
+    m_reverse: 0
     m_speech: "le voisin du crado dit toujours la v\xE9rit\xE9"
     m_accusedSpeech: pas cool
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
   - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
     m_entityPos: 240
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: le gant
+    m_reverse: 0
     m_speech: "bonjour tu peux m'enfiler s'il te pla\xEEt?"
     m_accusedSpeech: Non! j'ai rien fait!
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
   - m_entitySprite: {fileID: 21300000, guid: 14a30e668006aa14f92003524e6667f7, type: 3}
     m_entityPos: 270
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: le livre
+    m_reverse: 0
     m_speech: "le mec \xE0 ma gauche est un crado, le prochain \xE0 ma droite est
       un menteur"
     m_accusedSpeech: Je suis innocent monsieur!
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
-  m_planetDoodads: []
+    m_secretSpeech: {fileID: 0}
+  m_planetDoodads:
+  - m_entitySprite: {fileID: 21300000, guid: 1386a0b109836304d99e85c95785c9d9, type: 3}
+    m_entityPos: 60
+    m_sortingLayer: 4
+    m_sortingOrder: 1
+    m_entitySound: {fileID: 8300000, guid: 517256cbebc2f9d4798765b419f7467a, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: aed403b47ce000342a476170f1a8c4f5, type: 3}
+    m_entityPos: 63
+    m_sortingLayer: 1
+    m_sortingOrder: 0
+    m_entitySound: {fileID: 8300000, guid: 517256cbebc2f9d4798765b419f7467a, type: 3}

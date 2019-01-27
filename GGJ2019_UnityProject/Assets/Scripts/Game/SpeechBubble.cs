@@ -23,7 +23,13 @@ public class SpeechBubble : MonoBehaviour
         }
         else if (state == LevelState.Investigating || state == LevelState.Starting)
         {
-            newText = targetDescriptor.speech;
+            if(!target.isSecretActivated)
+                newText = targetDescriptor.speech;
+            else
+            {
+                newText = targetDescriptor.secretSpeech.secretSpeechString;
+            }
+            
         }
 
         m_bubbleText.text = newText;
