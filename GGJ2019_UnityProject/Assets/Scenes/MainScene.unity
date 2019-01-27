@@ -258,7 +258,7 @@ MonoBehaviour:
   m_doodadPrefab: {fileID: 1976143929159141176, guid: 7b6a2b9feeb018143b3d576ff9818a19,
     type: 3}
   m_levels:
-  - {fileID: 11400000, guid: a935ce5a439e7bb4cbb9ba595b9702cb, type: 2}
+  - {fileID: 11400000, guid: 831283c73213ca348a407c67328c06a9, type: 2}
   - {fileID: 11400000, guid: 99ff6dd934883634f86fd2cd43505c36, type: 2}
   - {fileID: 11400000, guid: 1a38ff83c47a03941bdfc2184a9b0ae3, type: 2}
   m_rotationSpeed: 4.5
@@ -1348,6 +1348,14 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 741263020, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_remainingTime
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 741263020, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_arrivalSpeed
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 1936204679660077477, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
         type: 3}

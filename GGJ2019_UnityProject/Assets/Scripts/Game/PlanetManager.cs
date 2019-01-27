@@ -42,6 +42,7 @@ public class PlanetManager : MonoBehaviour
     private float m_rotationStrenght;//Specify Angle For Rotation
     private bool m_isRotating;//Check Whether Currently Object is Rotating Or Not.
     private bool m_isSliding;
+    private bool m_hasLevelBeInitiated;
     private int m_direction;//Direction Of Rotation
     private HashSet<PlanetCharacter> m_accusedCharacters;
 
@@ -76,6 +77,14 @@ public class PlanetManager : MonoBehaviour
         m_currentState = LevelState.Starting;
         m_isRotating = false;
         m_isSliding = false;
+        
+        if (m_hasLevelBeInitiated)
+        {
+            m_currentState = LevelState.Investigating;
+            inGameScreen.accuseBtn.gameObject.SetActive(true);
+            return;
+        }
+
         Cx.Routine NewPlanetArrival = Cx.Sequence(
 
         inGameScreen.missionTitle.TitleAnimation(m_currentlevel, m_levels[m_currentlevel].caseName, m_levels[m_currentlevel].planetName),
@@ -96,7 +105,9 @@ public class PlanetManager : MonoBehaviour
         if (m_previousPlanet == null)
         {            
             NewPlanetArrival.Start(this);
+
         }
+        
         else
         {
             Cx.Sequence(
@@ -120,10 +131,12 @@ public class PlanetManager : MonoBehaviour
 
             ).Start(this);
         }
+        m_hasLevelBeInitiated = true;
     }
 
     private void GeneratePlanet(PlanetDescriptor planetDescriptor)
     {
+        m_hasLevelBeInitiated = false;
         m_currentState = LevelState.Starting;
         m_isRotating = false;
         m_isSliding = false;
