@@ -10,6 +10,7 @@ public class SoundToggle : MonoBehaviour
     [SerializeField] private int m_volume;
     [SerializeField] private AudioListener m_audioListener;
     [SerializeField] private Image m_disabledImage;
+    [SerializeField] private Image m_enabledImage;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +24,8 @@ public class SoundToggle : MonoBehaviour
         else
             m_volume = 1;
         AudioListener.volume = m_volume;
-        m_disabledImage.gameObject.SetActive(!m_disabledImage.gameObject.activeSelf);
+        m_disabledImage.gameObject.SetActive(m_volume == 0);
+        m_enabledImage.gameObject.SetActive(m_volume == 1);
         PlanetManager.Instance.currentPlanet.CheckSoundModifiedSecrets(m_volume);
     }
 }
