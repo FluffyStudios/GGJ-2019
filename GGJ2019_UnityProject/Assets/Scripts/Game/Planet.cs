@@ -27,6 +27,7 @@ public class Planet : MonoBehaviour
     [SerializeField] private SpriteRenderer m_planetSceneryLayer;
     [SerializeField] private SpriteRenderer m_planetGroundLayer;
     [SerializeField] private SpriteRenderer m_planetFrontLayer;
+    [SerializeField] private GameObject m_planetCoords;
     [SerializeField] private float m_frontRadius;
     public AudioSource AudioSource { get { return m_audioSource; } }
     [SerializeField] private AudioSource m_audioSource;
@@ -84,6 +85,11 @@ public class Planet : MonoBehaviour
             m_audioSource.clip = m_descriptor.planetMusic;
             this.m_audioSource.volume = FluffyBox.Application.Instance.MusicVolume;
         }
+    }
+
+    public void SwitchPlanetCoordsVisibility()
+    {
+        m_planetCoords.gameObject.SetActive(!m_planetCoords.gameObject.activeSelf);
     }
 
     public void PlayMusic()
