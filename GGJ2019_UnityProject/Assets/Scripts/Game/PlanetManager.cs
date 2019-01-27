@@ -299,7 +299,7 @@ public class PlanetManager : MonoBehaviour
                     OnCharSelectedEvent(charTouched, m_currentState);
                 }
                 charTouched.PlayAccusedSound();
-                m_accusedCharacters.Add(charTouched);                
+                m_accusedCharacters.Add(charTouched);
             }
             
             InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
@@ -313,6 +313,7 @@ public class PlanetManager : MonoBehaviour
     {
         InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
         inGameScreen.OnAccuseCanceledCb();
+        m_currentPlanet.PlayMusic();
     }
 
     private void Win()
@@ -321,6 +322,7 @@ public class PlanetManager : MonoBehaviour
         if (m_currentlevel >= m_levels.Length)
             m_currentlevel = Mathf.Min(m_levels.Length - 1, 1);
 
+        m_currentPlanet.AudioSource.Stop();
         this.GeneratePlanet(m_levels[m_currentlevel]);
         StartMissionAnim();
     }
@@ -351,6 +353,8 @@ public class PlanetManager : MonoBehaviour
                 else
                     Win();
 
+                m_currentPlanet.PlayMusic();
+
             })).Start(this);
     }
 
@@ -358,6 +362,7 @@ public class PlanetManager : MonoBehaviour
     {
         m_currentState = LevelState.Investigating;
         m_accusedCharacters.Clear();
+        m_currentPlanet.PlayMusic();
     }
 
     public void StartAccusation()
@@ -370,7 +375,8 @@ public class PlanetManager : MonoBehaviour
             }
         }
         m_currentState = LevelState.Accusing;
-        
+        m_currentPlanet.AudioSource.clip = FluffyBox.Application.Instance.AccusationTheme;
+        m_currentPlanet.AudioSource.Play();
     }
 
     private void PlanetRotation()

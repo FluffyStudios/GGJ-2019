@@ -98,6 +98,7 @@ public class Planet : MonoBehaviour
 
     public void PlayMusic()
     {
+        m_audioSource.clip = m_descriptor.planetMusic;
         m_audioSource.Play();
     }
 

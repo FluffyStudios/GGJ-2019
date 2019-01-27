@@ -613,6 +613,7 @@ MonoBehaviour:
   GameRoot: {fileID: 242212634}
   SkyboxCamera: {fileID: 184287732}
   MusicVolume: 0.35
+  AccusationTheme: {fileID: 8300000, guid: 232733a2b0f5e7549adc26b2a4c976c0, type: 3}
   Version: 0.1
 --- !u!4 &637928019
 Transform:
@@ -1036,8 +1037,8 @@ MonoBehaviour:
   MainCamera: {fileID: 2027638121}
   MainCameraAnimator: {fileID: 2027638122}
   AudioSource: {fileID: 2027638124}
-  ZoomClip: {fileID: 8300000, guid: 740b5545a35d3ff4ea5f6a7ec186875f, type: 3}
-  UnzoomClip: {fileID: 8300000, guid: c42b34b4cdbb9b1499f7d06773e750aa, type: 3}
+  ZoomClip: {fileID: 8300000, guid: c6d4682c3fe885a449d59d3fe22ea640, type: 3}
+  UnzoomClip: {fileID: 8300000, guid: c6d4682c3fe885a449d59d3fe22ea640, type: 3}
 --- !u!124 &2027638120
 Behaviour:
   m_ObjectHideFlags: 0
@@ -1132,7 +1133,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
