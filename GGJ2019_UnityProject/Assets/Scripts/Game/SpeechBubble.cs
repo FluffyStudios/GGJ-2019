@@ -52,7 +52,7 @@ public class SpeechBubble : MonoBehaviour
     {
         if(m_target != null)
         {
-            transform.position = new Vector2(m_target.transform.position.x, m_target.transform.position.y + 0.5f);
+            transform.position = new Vector2(m_target.transform.position.x, m_target.transform.position.y + 1f);
         }
     }
 }
