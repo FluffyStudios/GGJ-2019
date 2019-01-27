@@ -765,12 +765,12 @@ PrefabInstance:
     - target: {fileID: 114926111568729826, guid: 9578deb2a470ccd489cf693a4704479c,
         type: 3}
       propertyPath: m_FontData.m_FontSize
-      value: 130
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 114926111568729826, guid: 9578deb2a470ccd489cf693a4704479c,
         type: 3}
       propertyPath: m_FontData.m_MaxSize
-      value: 150
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 6115411111511502740, guid: 9578deb2a470ccd489cf693a4704479c,
         type: 3}
@@ -836,6 +836,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224727903150146722, guid: 9578deb2a470ccd489cf693a4704479c,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9578deb2a470ccd489cf693a4704479c, type: 3}
@@ -1342,6 +1347,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: InGameScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 7590728647958150251, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1949701874920379656, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
         type: 3}
