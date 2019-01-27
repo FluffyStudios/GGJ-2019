@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c6936cdfda75546b9291589967fe92, type: 3}
   m_Name: 2 Enquete The weak, the bad and the thief
   m_EditorClassIdentifier: 
-  m_caseName: The weak, the bad and the thief
+  m_caseName: The weak and the thief
   m_planetName: Verland
   m_planetFrontLayerTexture: {fileID: 0}
   m_planetGroundLayerTexture: {fileID: 0}
   m_planetSceneryLayerTexture: {fileID: 0}
   m_planetMusic: {fileID: 8300000, guid: 60f0b10f4fe09154dbd31f87377f8da9, type: 3}
   m_planetLeader:
-    m_entitySprite: {fileID: 21300000, guid: d57c24f0ed4846b44a0690251ece4536, type: 3}
+    m_entitySprite: {fileID: 21300000, guid: d7b1a2b4a01c3db419e160c6fb00fde8, type: 3}
     m_entityPos: 0
     m_sortingLayer: 3
     m_sortingOrder: 0

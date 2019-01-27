@@ -19,7 +19,7 @@ MonoBehaviour:
   m_planetSceneryLayerTexture: {fileID: 0}
   m_planetMusic: {fileID: 8300000, guid: 60f0b10f4fe09154dbd31f87377f8da9, type: 3}
   m_planetLeader:
-    m_entitySprite: {fileID: 21300000, guid: d57c24f0ed4846b44a0690251ece4536, type: 3}
+    m_entitySprite: {fileID: 21300000, guid: 514294a0dbf284b448b97ba3c786cc3b, type: 3}
     m_entityPos: 0
     m_sortingLayer: 3
     m_sortingOrder: 0
@@ -33,7 +33,7 @@ MonoBehaviour:
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
   m_planetCharacters:
-  - m_entitySprite: {fileID: 21300000, guid: 41c6f94d80f9e034a9c63dcf97d30f5c, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 1ef63f3470658d740af95fd97b43d7a8, type: 3}
     m_entityPos: 20
     m_sortingLayer: 3
     m_sortingOrder: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
-  - m_entitySprite: {fileID: 21300000, guid: 6b4d731bb49028047a4a8c4c1fa3bc4f, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 1ef63f3470658d740af95fd97b43d7a8, type: 3}
     m_entityPos: 45
     m_sortingLayer: 3
     m_sortingOrder: 0
@@ -57,7 +57,7 @@ MonoBehaviour:
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
-  - m_entitySprite: {fileID: 21300000, guid: 588ac5b533407b74ab8b59d1f45e90db, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: df833897e18803544a6f25658f9610e7, type: 3}
     m_entityPos: 150
     m_sortingLayer: 3
     m_sortingOrder: 0
@@ -69,7 +69,7 @@ MonoBehaviour:
     m_isGuilty: 1
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
-  - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 63ddbad9ba7eadd489dcd0c39bcd0dfa, type: 3}
     m_entityPos: 240
     m_sortingLayer: 3
     m_sortingOrder: 0
