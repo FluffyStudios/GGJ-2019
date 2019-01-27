@@ -20,10 +20,18 @@ public class PlanetCharacterDescriptor : PlanetEntityDescriptor
     [SerializeField]
     private bool m_isGuilty;
     public bool isGuilty { get { return m_isGuilty; } }
-
-    
+  
     [SerializeField]
     private AudioClip m_accusedSound;
     public AudioClip accusedSound { get { return m_accusedSound; } }
+
+    [Header("Hidden Speech Settings")]
+    [SerializeField]
+    private bool m_hasHiddenSpeech;
+    public bool hasHiddenSpeech { get { return m_hasHiddenSpeech; } }
+
+    [SerializeField]
+    private string m_hiddenSpeech;
+    public string hiddenSpeech { get { return m_hiddenSpeech; } }
 
 }
