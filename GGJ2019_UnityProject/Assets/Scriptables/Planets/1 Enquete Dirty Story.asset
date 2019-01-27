@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c6936cdfda75546b9291589967fe92, type: 3}
   m_Name: 1 Enquete Dirty Story
   m_EditorClassIdentifier: 
-  m_caseName: A dirty story
+  m_caseName: Sale histoire
   m_planetName: Fragrance
   m_planetFrontLayerTexture: {fileID: 0}
   m_planetGroundLayerTexture: {fileID: 0}
@@ -26,9 +26,9 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Johnny
     m_reverse: 0
-    m_speech: 'Hello inspector. Someone soils our pretty planet ! I am very angry
-      ! '
-    m_accusedSpeech: Me ? I soil my PRETTY planet ? You fool
+    m_speech: "Bonjour inspecteur. Quelqu'un a sali notre jolie plan\xE8te ! Je suis
+      tr\xE8s en col\xE8re !"
+    m_accusedSpeech: "Moi ? Salir ma jolie plan\xE8te ? Idiot !"
     m_isGuilty: 1
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
@@ -40,7 +40,7 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Denis
     m_reverse: 0
-    m_speech: Mia hates people who soil the planet
+    m_speech: "Mia d\xE9teste les personnes qui d\xE9gradent notre plan\xE8te"
     m_accusedSpeech: '...'
     m_isGuilty: 1
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
@@ -52,9 +52,9 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: Mia
     m_reverse: 0
-    m_speech: I am so sad this planet is dirty now. But Julian helps me to clean the
-      dirt
-    m_accusedSpeech: 'I love this planet ! '
+    m_speech: "Je suis si triste que notre plan\xE8te soit salie. Mais Julian m'aide
+      \xE0 nettoyer la plan\xE8te"
+    m_accusedSpeech: "Mais j'aime ma plan\xE8te pourquoi je ferais \xE7a ?"
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
@@ -65,8 +65,8 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: 'Julian '
     m_reverse: 0
-    m_speech: How are you inspector ? You progress in your investigation ?
-    m_accusedSpeech: Who are you to judge me ?
+    m_speech: "Comment allez vous monsieur l'inspecteur ? L'enqu\xEAte avance ?"
+    m_accusedSpeech: "Qui \xEAtes-vous pour me juger ?"
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
@@ -76,10 +76,10 @@ MonoBehaviour:
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Miranda
-    m_reverse: 0
-    m_speech: I never like the mayor, he can make everything to accomplish his own
-      ends
-    m_accusedSpeech: Hey I will punch you !
+    m_reverse: 1
+    m_speech: "Je n'ai jamais appr\xE9ci\xE9 le Maire, il fera tout pour arriver \xE0
+      ses fins"
+    m_accusedSpeech: Eh, tu veux que je te cogne ?
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
@@ -90,8 +90,9 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Anita
     m_reverse: 0
-    m_speech: Julian and Denis are good friends. They always made foolishness together.
-    m_accusedSpeech: You are wrong !
+    m_speech: "Julian et Denis sont de tr\xE8s bons amis ! Ils sont toujours ensembles
+      pour faire les 400 coups."
+    m_accusedSpeech: Vous avez tort !
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
@@ -102,8 +103,9 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Micheal
     m_reverse: 0
-    m_speech: Denis made this. I saw him, but he wasn't alone.
-    m_accusedSpeech: I said it's Julian !
+    m_speech: "C'est Denis qui a sali notre plan\xE8te, je l'ai vu ! Mais il n'\xE9tait
+      pas seul..."
+    m_accusedSpeech: C'est pas moi c'est Denis !
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
@@ -114,8 +116,9 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Richard
     m_reverse: 0
-    m_speech: 'The mayor falls in love with Mia, but Mia prefers Julian''s company '
-    m_accusedSpeech: Are you serious ?
+    m_speech: "Le Maire est fou amoureux de Mia, mais Mia pr\xE9f\xE8re la compagnie
+      de Julian"
+    m_accusedSpeech: "Vous \xEAtes s\xE9rieux ?"
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
