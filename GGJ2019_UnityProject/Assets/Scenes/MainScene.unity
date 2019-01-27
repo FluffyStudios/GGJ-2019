@@ -1519,19 +1519,88 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7653911584728214490, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 155.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 7653911584728214490, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1610.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 432590841, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 337.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 432590841, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 977.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 432590840, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056211388, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5942628313748457087, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
         type: 3}
       propertyPath: m_portraitSlowDecalValue
       value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5942628313748457087, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
+        type: 3}
+      propertyPath: m_accusationValidationText
+      value: "Vous \xEAtes coupables !"
       objectReference: {fileID: 0}
     - target: {fileID: 2528662712901853107, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
         type: 3}
       propertyPath: m_Text
       value: Valider
       objectReference: {fileID: 0}
+    - target: {fileID: 432590843, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.14578143
+      objectReference: {fileID: 0}
+    - target: {fileID: 432590843, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7924528
+      objectReference: {fileID: 0}
+    - target: {fileID: 432590843, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.3312239
+      objectReference: {fileID: 0}
+    - target: {fileID: 432590843, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: e85b589699c62ba4a9c05cf6a8331739,
+        type: 3}
+    - target: {fileID: 432590843, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_Text
+      value: "BIEN JOU\xC9 !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 432590842, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 748507242, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
       propertyPath: m_Text
       value: ACCUSER !
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056211391, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_Text
+      value: "RAT\xC9 !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2056211390, guid: 8d62ac2ff2363ee42a86adb65e4d562d, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7848292692104981731, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
+        type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 140
       objectReference: {fileID: 0}
     - target: {fileID: 6995625514188519756, guid: 8d62ac2ff2363ee42a86adb65e4d562d,
         type: 3}
