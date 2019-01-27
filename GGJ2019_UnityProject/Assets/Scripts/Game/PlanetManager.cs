@@ -173,11 +173,14 @@ public class PlanetManager : MonoBehaviour
                     {
                         ResolveCharacterTouch(characterTouched);                      
                     }
-                }
-                
+                    PlanetSceneryElement objTouched = touchedObject.GetComponent<PlanetSceneryElement>();
+                    if (objTouched != null)
+                    {
+                        ResolveDoodadTouch(objTouched);
+                    }
+                }            
                 m_startTouch = Input.mousePosition;
-                m_isSliding = true;
-                          
+                m_isSliding = true;                       
             }
             if (Input.GetMouseButtonUp(0))
             {
@@ -199,6 +202,16 @@ public class PlanetManager : MonoBehaviour
             }           
         }    
     }
+
+    private void ResolveDoodadTouch(PlanetSceneryElement objTouched)
+    {
+        if (m_currentState == LevelState.Investigating)
+        {
+            objTouched.PlaySelectionSound();
+        }
+    }
+
+
     private void ResolveCharacterTouch(PlanetCharacter charTouched)
     {
         if (m_currentState == LevelState.Investigating)
