@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c6936cdfda75546b9291589967fe92, type: 3}
   m_Name: 2 Enquete The weak, the bad and the thief
   m_EditorClassIdentifier: 
-  m_caseName: The weak and the thief
-  m_planetName: Verland
+  m_caseName: Le faible et le voleur
+  m_planetName: Verlan
   m_planetFrontLayerTexture: {fileID: 0}
   m_planetGroundLayerTexture: {fileID: 0}
   m_planetSceneryLayerTexture: {fileID: 0}
@@ -26,106 +26,107 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Sara
     m_reverse: 0
-    m_speech: 'Hey ! How is your travel ? A thief is free on our planet. Find him
-      ! '
-    m_accusedSpeech: Me ! Me ! Me ! The autorithy, it is me !
+    m_speech: "Salut, comment a \xE9t\xE9 votre voyage ? Il y a un voleur en libert\xE9.
+      Trouvez le !"
+    m_accusedSpeech: "Moi ! Moi ! C'est moi l'autorit\xE9 ici, pas le voleur !"
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
   m_planetCharacters:
-  - m_entitySprite: {fileID: 21300000, guid: 41c6f94d80f9e034a9c63dcf97d30f5c, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 63ddbad9ba7eadd489dcd0c39bcd0dfa, type: 3}
     m_entityPos: 40
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Marguerite
     m_reverse: 0
-    m_speech: Some villagers have reverse speech
-    m_accusedSpeech: You are ugly !
+    m_speech: "Certain habitant parle \xE0 l'envers"
+    m_accusedSpeech: "Vous \xEAtes horrible !"
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
-  - m_entitySprite: {fileID: 21300000, guid: 6b4d731bb49028047a4a8c4c1fa3bc4f, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 33b77bd482e16814094f9f9677a59675, type: 3}
     m_entityPos: 100
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: Paul
     m_reverse: 1
-    m_speech: I know nothing !
-    m_accusedSpeech: Please I am innocent !
+    m_speech: Je ne sais rien !
+    m_accusedSpeech: "S'il vous pla\xEEt, je suis innocent !"
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 11400000, guid: 81b72110abbfcb84386858296edd9be0, type: 2}
-  - m_entitySprite: {fileID: 21300000, guid: 588ac5b533407b74ab8b59d1f45e90db, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 1ef63f3470658d740af95fd97b43d7a8, type: 3}
     m_entityPos: 150
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: Shane
     m_reverse: 0
-    m_speech: What do you want ?
-    m_accusedSpeech: Get out !
+    m_speech: Qu'est ce que tu veux ?
+    m_accusedSpeech: "D\xE9gages de l\xE0 !"
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
-  - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: df833897e18803544a6f25658f9610e7, type: 3}
     m_entityPos: 240
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Abigail
     m_reverse: 1
-    m_speech: Poor Paul, Shane don't stop to harass him
-    m_accusedSpeech: The guilty is surely Shane, not me
+    m_speech: "Pauvre Paul, il n'arr\xEAte de se faire emb\xEAter par Shane"
+    m_accusedSpeech: "Le coupable est s\xFBrement Shane, pas moi "
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
-  - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: d7b1a2b4a01c3db419e160c6fb00fde8, type: 3}
     m_entityPos: 280
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Joy
     m_reverse: 0
-    m_speech: Paul is weak. If you put pressure on him, he will tell you his secret.
-    m_accusedSpeech: Hey, I gave you an advice ! Why you blame me ?
+    m_speech: "Paul est fragile. Si vous le secouez un peu, il d\xE9voilera son secret
+      !"
+    m_accusedSpeech: Et je vous ai dit ce que je savais. Pourquoi vous m'accusez ?
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
-  - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 30ef07919369c3c4a9d3b7a824049508, type: 3}
     m_entityPos: 300
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Leon
     m_reverse: 0
-    m_speech: We have a good weather today
-    m_accusedSpeech: What happen ?
+    m_speech: Il fait beau aujourd'hui !
+    m_accusedSpeech: Qu'est ce qu'il se passe ?
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
-  - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: b9d48c2c97c5a25449e672b687853332, type: 3}
     m_entityPos: 320
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Cecile
     m_reverse: 0
-    m_speech: It was a good meal !
-    m_accusedSpeech: Do I like a thief ?
+    m_speech: "C'\xE9tait un bon repas"
+    m_accusedSpeech: "Je ressemble \xE0 un voleur ?"
     m_isGuilty: 1
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
-  - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
+  - m_entitySprite: {fileID: 21300000, guid: 63ddbad9ba7eadd489dcd0c39bcd0dfa, type: 3}
     m_entityPos: 350
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Bruce
     m_reverse: 1
-    m_speech: You look good, mister
-    m_accusedSpeech: I can have everything, why will I steal ?
+    m_speech: "Vous \xEAtes charmant, monsieur"
+    m_accusedSpeech: Je peux tout avoir, pourquoi je volerai ?
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
