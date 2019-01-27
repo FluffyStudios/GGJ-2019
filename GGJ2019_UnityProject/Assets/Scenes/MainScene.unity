@@ -258,8 +258,8 @@ MonoBehaviour:
   m_doodadPrefab: {fileID: 1976143929159141176, guid: 7b6a2b9feeb018143b3d576ff9818a19,
     type: 3}
   m_levels:
-  - {fileID: 11400000, guid: a935ce5a439e7bb4cbb9ba595b9702cb, type: 2}
-  - {fileID: 11400000, guid: 54f06ed74e479d4439e28a2a90afc3d0, type: 2}
+  - {fileID: 11400000, guid: 831283c73213ca348a407c67328c06a9, type: 2}
+  - {fileID: 11400000, guid: 23fe36323fdc43e4e887cceb58b1af27, type: 2}
   m_rotationSpeed: 4.5
   m_swipDistMultiplier: 0.3
   m_maxSwipDist: 20

@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: RadioPlanet
   m_EditorClassIdentifier: 
   m_caseName: Party hard
-  m_planetName: "Plan\xE8te Wave"
-  m_planetFrontLayerTexture: {fileID: 0}
-  m_planetGroundLayerTexture: {fileID: 0}
-  m_planetSceneryLayerTexture: {fileID: 0}
+  m_planetName: Wave
+  m_planetFrontLayerTexture: {fileID: 21300000, guid: 62b10d70e5c05494084546254f64c188,
+    type: 3}
+  m_planetGroundLayerTexture: {fileID: 21300000, guid: 9456c2a8b645ce64a81a5b88a51e365f,
+    type: 3}
+  m_planetSceneryLayerTexture: {fileID: 21300000, guid: 1ddc9b92b43f2ab45af909170ee83aae,
+    type: 3}
   m_planetMusic: {fileID: 8300000, guid: 60f0b10f4fe09154dbd31f87377f8da9, type: 3}
   m_planetLeader:
     m_entitySprite: {fileID: 21300000, guid: 514294a0dbf284b448b97ba3c786cc3b, type: 3}
@@ -113,7 +116,7 @@ MonoBehaviour:
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: 517256cbebc2f9d4798765b419f7467a, type: 3}
-    m_characterName: Jeannot Lapin
+    m_characterName: Fantastic Fox
     m_reverse: 0
     m_speech: "Ecoute-\xE7a c'est mon dernier son mec! \xE7a d\xE9chire hein?"
     m_accusedSpeech: Je suis innocent monsieur!

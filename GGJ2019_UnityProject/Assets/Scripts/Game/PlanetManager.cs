@@ -317,7 +317,7 @@ public class PlanetManager : MonoBehaviour
     {
         m_currentlevel += 1;
         if (m_currentlevel >= m_levels.Length)
-            m_currentlevel = 1;
+            m_currentlevel = Mathf.Min(m_levels.Length - 1, 1);
 
         this.GeneratePlanet(m_levels[m_currentlevel]);
         StartMissionAnim();
