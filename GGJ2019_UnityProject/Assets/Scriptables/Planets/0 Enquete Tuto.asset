@@ -25,11 +25,13 @@ MonoBehaviour:
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Mister Mayor
+    m_reverse: 0
     m_speech: Welcome to Tutoya. I am the mayor ! A villager broke my jar ! Touch
       a character to talk with them, they can help you.
     m_accusedSpeech: How dare you ? You are a bad guy !
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
   m_planetCharacters:
   - m_entitySprite: {fileID: 21300000, guid: 41c6f94d80f9e034a9c63dcf97d30f5c, type: 3}
     m_entityPos: 20
@@ -37,39 +39,46 @@ MonoBehaviour:
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Tom
+    m_reverse: 0
     m_speech: Swipe left to go left or swipe right to go right
     m_accusedSpeech: You make a mistake mister !
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
   - m_entitySprite: {fileID: 21300000, guid: 6b4d731bb49028047a4a8c4c1fa3bc4f, type: 3}
     m_entityPos: 45
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: Donald
-    m_speech: To accuse the guilty, touch the button Accuse and select the guilty
-      !
+    m_reverse: 0
+    m_speech: To blame the guilty, touch the button Blame and select the guilty !
     m_accusedSpeech: You accuse the wrong guy !
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
   - m_entitySprite: {fileID: 21300000, guid: 588ac5b533407b74ab8b59d1f45e90db, type: 3}
     m_entityPos: 150
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: Stefan
+    m_reverse: 0
     m_speech: Hey Inspector !
     m_accusedSpeech: Not cool !
     m_isGuilty: 1
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
   - m_entitySprite: {fileID: 21300000, guid: 89f3171d2ad4b8c468c652be9f406f5b, type: 3}
     m_entityPos: 240
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Eve
+    m_reverse: 0
     m_speech: Psst, the guy on my left is the guilty
     m_accusedSpeech: I did nothing mister !
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_secretSpeech: {fileID: 0}
   m_planetDoodads: []
