@@ -40,7 +40,7 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Marguerite
     m_reverse: 0
-    m_speech: "Certain habitant parle \xE0 l'envers"
+    m_speech: "Certains habitants parlent \xE0 l'envers"
     m_accusedSpeech: "Vous \xEAtes horrible !"
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
@@ -76,7 +76,7 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Abigail
     m_reverse: 1
-    m_speech: "Pauvre Paul, il n'arr\xEAte de se faire emb\xEAter par Shane"
+    m_speech: "Pauvre Paul, il n'arr\xEAte pas de se faire emb\xEAter par Shane"
     m_accusedSpeech: "Le coupable est s\xFBrement Shane, pas moi "
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
@@ -88,8 +88,8 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Joy
     m_reverse: 0
-    m_speech: "Paul est fragile. Si vous le secouez un peu, il d\xE9voilera son secret
-      !"
+    m_speech: "Paul est un fragile. Si vous le secouez un peu, il d\xE9voilera son
+      secret !"
     m_accusedSpeech: Et je vous ai dit ce que je savais. Pourquoi vous m'accusez ?
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
@@ -126,7 +126,7 @@ MonoBehaviour:
     m_characterName: Bruce
     m_reverse: 1
     m_speech: "Vous \xEAtes charmant, monsieur"
-    m_accusedSpeech: Je peux tout avoir, pourquoi je volerai ?
+    m_accusedSpeech: Je peux tout avoir, pourquoi je volerais ?
     m_isGuilty: 0
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}
