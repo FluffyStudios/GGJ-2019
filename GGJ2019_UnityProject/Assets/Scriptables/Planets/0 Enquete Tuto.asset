@@ -65,7 +65,7 @@ MonoBehaviour:
     m_characterName: Jackie la maladroite
     m_reverse: 0
     m_speech: Coucou inspecteur!
-    m_accusedSpeech: "Euh... vous \xEAtes vraiment sur de vous?"
+    m_accusedSpeech: "Euh... vous \xEAtes vraiment s\xFBr de vous?"
     m_isGuilty: 1
     m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
     m_secretSpeech: {fileID: 0}

@@ -80,7 +80,9 @@ public class PlanetManager : MonoBehaviour
         m_currentState = LevelState.Starting;
         m_isRotating = false;
         m_isSliding = false;
-        
+        m_accusedCharacters.Clear();
+
+
         if (m_hasLevelBeInitiated)
         {
             m_currentState = LevelState.Investigating;
