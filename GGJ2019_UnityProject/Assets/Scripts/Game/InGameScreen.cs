@@ -11,7 +11,7 @@ public class InGameScreen : FluffyBox.GuiScreen
     public Button accuseBtn { get { return m_accuseBtn; } }
     [SerializeField] private Button m_cancelAccuseBtn;
     [SerializeField] private Button m_validateAccuseBtn;
-    public Button validateAccuseBtn { get { return m_validateAccuseBtn; } }
+    [SerializeField] private Text m_validateAccuseBtnText;
     [SerializeField] private SpeechBubble m_speechBubblePrefab;
     [SerializeField] private Transform m_speechBubblecontent;
     [SerializeField] private MissionTitle m_missionTitle;
@@ -43,7 +43,7 @@ public class InGameScreen : FluffyBox.GuiScreen
         m_accusationPopup.AccusationPopupAnim().Start(this);
         m_cancelAccuseBtn.gameObject.SetActive(true);
         m_validateAccuseBtn.gameObject.SetActive(true);
-        m_validateAccuseBtn.interactable = false;
+        this.SetValidateButtonState(false);
         m_accuseBtn.gameObject.SetActive(false);
         PlanetManager.Instance.StartAccusation();
     }
@@ -105,6 +105,12 @@ public class InGameScreen : FluffyBox.GuiScreen
             Destroy(kv.Value.gameObject);
         }
         m_charactersToSpeeches.Clear();
+    }
+
+    public void SetValidateButtonState(bool value)
+    {
+        this.m_validateAccuseBtn.interactable = value;
+        this.m_validateAccuseBtnText.color = new Color(this.m_validateAccuseBtnText.color.r, this.m_validateAccuseBtnText.color.g, this.m_validateAccuseBtnText.color.b, value ? 1f : 0.75f);
     }
 
     private void OnCharUnSelected(PlanetCharacter character, LevelState state)

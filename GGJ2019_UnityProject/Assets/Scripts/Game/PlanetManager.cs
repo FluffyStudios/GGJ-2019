@@ -271,7 +271,7 @@ public class PlanetManager : MonoBehaviour
             }
             
             InGameScreen inGameScreen = Gui.GuiService.GetWindow<InGameScreen>();
-            inGameScreen.validateAccuseBtn.interactable = m_accusedCharacters.Count > 0;
+            inGameScreen.SetValidateButtonState(m_accusedCharacters.Count > 0);
         }
         else
             return;      
