@@ -24,7 +24,7 @@ MonoBehaviour:
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
-    m_characterName: Johnny
+    m_characterName: Le Maire Johnny
     m_reverse: 0
     m_speech: "Bonjour inspecteur. Quelqu'un a sali notre jolie plan\xE8te ! Je suis
       tr\xE8s en col\xE8re !"
@@ -43,7 +43,7 @@ MonoBehaviour:
     m_speech: "Mia d\xE9teste les personnes qui d\xE9gradent notre plan\xE8te"
     m_accusedSpeech: '...'
     m_isGuilty: 1
-    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_accusedSound: {fileID: 8300000, guid: f6403ffaf8e336d4ea63f72fc9496c44, type: 3}
     m_secretSpeech: {fileID: 0}
   - m_entitySprite: {fileID: 21300000, guid: d7b1a2b4a01c3db419e160c6fb00fde8, type: 3}
     m_entityPos: 100
@@ -68,7 +68,7 @@ MonoBehaviour:
     m_speech: "Comment allez vous monsieur l'inspecteur ? L'enqu\xEAte avance ?"
     m_accusedSpeech: "Qui \xEAtes-vous pour me juger ?"
     m_isGuilty: 0
-    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_accusedSound: {fileID: 8300000, guid: f6403ffaf8e336d4ea63f72fc9496c44, type: 3}
     m_secretSpeech: {fileID: 0}
   - m_entitySprite: {fileID: 21300000, guid: 30ef07919369c3c4a9d3b7a824049508, type: 3}
     m_entityPos: 240
@@ -76,7 +76,7 @@ MonoBehaviour:
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Miranda
-    m_reverse: 1
+    m_reverse: 0
     m_speech: "Je n'ai jamais appr\xE9ci\xE9 le Maire, il fera tout pour arriver \xE0
       ses fins"
     m_accusedSpeech: Eh, tu veux que je te cogne ?
@@ -88,7 +88,7 @@ MonoBehaviour:
     m_sortingLayer: 3
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
-    m_characterName: Anita
+    m_characterName: Anita, l'adjointe au Maire
     m_reverse: 0
     m_speech: "Julian et Denis sont de tr\xE8s bons amis ! Ils sont toujours ensembles
       pour faire les 400 coups."
@@ -107,7 +107,7 @@ MonoBehaviour:
       pas seul..."
     m_accusedSpeech: C'est pas moi c'est Denis !
     m_isGuilty: 0
-    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_accusedSound: {fileID: 8300000, guid: f6403ffaf8e336d4ea63f72fc9496c44, type: 3}
     m_secretSpeech: {fileID: 0}
   - m_entitySprite: {fileID: 21300000, guid: 33b77bd482e16814094f9f9677a59675, type: 3}
     m_entityPos: 320

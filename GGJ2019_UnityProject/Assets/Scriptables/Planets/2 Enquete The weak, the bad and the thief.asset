@@ -51,11 +51,11 @@ MonoBehaviour:
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: 75e82bfd1795fc240ba5a2b9735bb082, type: 3}
     m_characterName: Paul
-    m_reverse: 1
+    m_reverse: 0
     m_speech: Je ne sais rien !
     m_accusedSpeech: "S'il vous pla\xEEt, je suis innocent !"
     m_isGuilty: 0
-    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_accusedSound: {fileID: 8300000, guid: f6403ffaf8e336d4ea63f72fc9496c44, type: 3}
     m_secretSpeech: {fileID: 11400000, guid: 81b72110abbfcb84386858296edd9be0, type: 2}
   - m_entitySprite: {fileID: 21300000, guid: 1ef63f3470658d740af95fd97b43d7a8, type: 3}
     m_entityPos: 150
@@ -88,11 +88,11 @@ MonoBehaviour:
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Joy
     m_reverse: 0
-    m_speech: "Paul est un fragile. Si vous le secouez un peu, il d\xE9voilera son
-      secret !"
+    m_speech: Paul est un fragile. Si vous insistez, il craquera psychologiquement
+      !
     m_accusedSpeech: Et je vous ai dit ce que je savais. Pourquoi vous m'accusez ?
     m_isGuilty: 0
-    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_accusedSound: {fileID: 8300000, guid: f6403ffaf8e336d4ea63f72fc9496c44, type: 3}
     m_secretSpeech: {fileID: 0}
   - m_entitySprite: {fileID: 21300000, guid: 30ef07919369c3c4a9d3b7a824049508, type: 3}
     m_entityPos: 300
@@ -112,11 +112,11 @@ MonoBehaviour:
     m_sortingOrder: 0
     m_entitySound: {fileID: 8300000, guid: e27cbc980095c974799b6921866c5f13, type: 3}
     m_characterName: Cecile
-    m_reverse: 0
+    m_reverse: 1
     m_speech: "C'\xE9tait un bon repas"
     m_accusedSpeech: "Je ressemble \xE0 un voleur ?"
     m_isGuilty: 1
-    m_accusedSound: {fileID: 8300000, guid: 3f32c7aa7806ac9469c4323fcd55f1ac, type: 3}
+    m_accusedSound: {fileID: 8300000, guid: f6403ffaf8e336d4ea63f72fc9496c44, type: 3}
     m_secretSpeech: {fileID: 0}
   - m_entitySprite: {fileID: 21300000, guid: 63ddbad9ba7eadd489dcd0c39bcd0dfa, type: 3}
     m_entityPos: 350
