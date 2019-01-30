@@ -18,8 +18,8 @@ public class PlanetManager : MonoBehaviour
     [SerializeField] private float m_planetPosY = -9f;
     [SerializeField] private PlanetCharacter m_characterPrefab;    
     public PlanetCharacter characterPrefab { get { return m_characterPrefab; } }
-    [SerializeField] private PlanetSceneryElement m_doodadPrefab;
-    public PlanetSceneryElement doodadPrefab { get { return m_doodadPrefab; } }
+    [SerializeField] private PlanetDoodad m_doodadPrefab;
+    public PlanetDoodad doodadPrefab { get { return m_doodadPrefab; } }
     [SerializeField] private PlanetDescriptor[] m_levels;
     [SerializeField] private float m_rotationSpeed = 5f;
     [SerializeField] private float m_swipDistMultiplier = 5f;
@@ -192,7 +192,7 @@ public class PlanetManager : MonoBehaviour
                     {
                         ResolveCharacterTouch(characterTouched);                      
                     }
-                    PlanetSceneryElement objTouched = touchedObject.GetComponent<PlanetSceneryElement>();
+                    PlanetDoodad objTouched = touchedObject.GetComponent<PlanetDoodad>();
                     if (objTouched != null)
                     {
                         ResolveDoodadTouch(objTouched);
@@ -235,7 +235,7 @@ public class PlanetManager : MonoBehaviour
         }    
     }
 
-    private void ResolveDoodadTouch(PlanetSceneryElement objTouched)
+    private void ResolveDoodadTouch(PlanetDoodad objTouched)
     {
         if (m_currentState == LevelState.Investigating)
         {

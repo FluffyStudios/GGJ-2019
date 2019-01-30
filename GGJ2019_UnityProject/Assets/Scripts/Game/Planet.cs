@@ -2,20 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
-
-public static class PlanetMathHelper
-{
-    public static Vector2 FromPolar(float radius, float angle)
-    {
-        float radAngle = Mathf.Deg2Rad*-(angle-90);
-        return new Vector2(radius * Mathf.Cos(radAngle), radius * Mathf.Sin(radAngle));
-    }
-    public static Vector2 FromCartesian(float xpos, float ypos)
-    {
-        // à remplir si besoin
-        return new Vector2(0f,0f);
-    }
-}
+using FluffyTools;
 
 public class Planet : MonoBehaviour
 {
@@ -108,17 +95,16 @@ public class Planet : MonoBehaviour
             m_guiltyCount += 1;
         PlanetCharacter character = Instantiate(PlanetManager.Instance.characterPrefab, m_entitiesParent, false) as PlanetCharacter;
         character.InitializeCharacter(characterDescriptor);
-        character.gameObject.transform.localPosition = PlanetMathHelper.FromPolar(m_frontRadius, character.descriptor.entityPos);
+        character.gameObject.transform.localPosition = MathHelpers.FromPolar(m_frontRadius, character.descriptor.entityPos);
         character.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, -character.descriptor.entityPos);
         return character;
     }
 
-    private PlanetSceneryElement InstanciateDoodad(PlanetDoodadDescriptor doodadDescriptor)
+    private PlanetDoodad InstanciateDoodad(PlanetDoodadDescriptor doodadDescriptor)
     {
-
-        PlanetSceneryElement doodad = Instantiate(PlanetManager.Instance.doodadPrefab, m_entitiesParent, false) as PlanetSceneryElement;
+        PlanetDoodad doodad = Instantiate(PlanetManager.Instance.doodadPrefab, m_entitiesParent, false) as PlanetDoodad;
         doodad.InitializeCharacter(doodadDescriptor);
-        doodad.gameObject.transform.localPosition = PlanetMathHelper.FromPolar(m_frontRadius, doodad.descriptor.entityPos);
+        doodad.gameObject.transform.localPosition = MathHelpers.FromPolar(m_frontRadius, doodad.descriptor.entityPos);
         doodad.gameObject.transform.localRotation = Quaternion.Euler(0f, 0f, -doodad.descriptor.entityPos);
         return doodad;
     }
